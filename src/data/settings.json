@@ -1,0 +1,29 @@
+{
+  "logo": "Alen Basar",
+  "homepage": {
+    "banner": {
+      "background": "https://storage.googleapis.com/portfolio_take1/videos/neonvideoloopfall.mp4",
+      "heading": "Hi, my name is Alen.",
+      "subheading": [
+        "I'm a web developer from Sydney.",
+        "Welcome to my portfolio"
+      ],
+      "cta": "Get in touch",
+      "ctaLink": "contact"
+    },
+    "about": {
+      "image": "https://storage.googleapis.com/portfolio_take1/images/about_image3.jpg",
+      "heading": "About me",
+      "subheading": "Australian web developer",
+      "aboutText": [
+        "My name is Alen Basar, I'm a young Sydney based web developer eager to learn and grow. I am extremely passionate about web development, programming and software in general.",
+        "How did I get into web development?",
+        "Well, I always wanted to make money by being creative, and I already had some experience with programming, so I figured why not make websites?",
+        "What are the technologies I have experience dealing with?",
+        "The journey through the world of web development started with learing fundamental front-end technologies (HTML, CSS and JavaScript), probably like every other web developer. After getting solid knowledge of fundamental languages I chose to learn React.js, PHP, SQL and more."
+      ],
+      "cta": "Check out my resume",
+      "ctaLink": "contact"
+    }
+  }
+}

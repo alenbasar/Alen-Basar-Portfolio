@@ -1,0 +1,131 @@
+@mixin size-1 {
+  font-size: #{$font-size-base * 1.4};
+
+  @include media(medium) {
+    font-size: #{$font-size-base * 1.9};
+  }
+}
+
+@mixin size-2 {
+  font-size: #{$font-size-base * 1.1};
+
+  @include media(medium) {
+    font-size: #{$font-size-base * 1.5};
+  }
+}
+
+@mixin size-3 {
+  font-size: #{$font-size-base * 0.9};
+
+  @include media(medium) {
+    font-size: #{$font-size-base * 1.3};
+  }
+}
+
+@mixin size-regular {
+  font-size: #{$font-size-base * 0.75};
+
+  @include media(medium) {
+    font-size: #{$font-size-base * 0.8};
+  }
+}
+
+h1,
+.is-size-1 {
+  @include size-1();
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  margin: 1.4rem 0;
+}
+
+h2,
+.is-size-2 {
+  @include size-2();
+  font-family: $font-secondary;
+  font-weight: $font-bold;
+  margin: 0.7rem 0;
+}
+
+h3,
+.is-size-3 {
+  @include size-3();
+  font-family: $font-secondary;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+h4,
+p,
+span,
+label,
+a,
+input,
+textarea,
+.is-size-reg {
+  @include size-regular();
+  margin: 0.2rem 0;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  overflow-x: hidden;
+  font-weight: $font-bold;
+  transform: translateY(2px);
+  color: white;
+  padding-bottom: 2px;
+
+  &.is-active,
+  &:hover {
+    // color: white;
+    transition: all 0.3s ease-in;
+  }
+
+  &:before {
+    // padding: 0.01px;
+    // margin-bottom: -2px;
+    bottom: 0;
+    right: 0;
+    content: '';
+    // margin-bottom: auto;
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background: #b5179d;
+    transition: all 0.3s ease;
+    transform: scale(0, 3);
+    transform-origin: center;
+    z-index: -1;
+  }
+
+  &.is-active,
+  &:hover {
+    &:before {
+      transform: scale(1, 2);
+      color: black;
+      // bottom: -5px;
+    }
+  }
+}
+
+input,
+textarea {
+  padding: 0.5rem 0.7rem;
+  border: 0.0625rem solid $color-primary;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease;
+
+  &:focus {
+    border: 0.125rem solid $color-primary;
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 4px #e60073,
+      0 0 5px #e60073, 0 0 6px #e60073, 0 0 7px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 5px #ff4da6, 0 0 6px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
+  }
+}
