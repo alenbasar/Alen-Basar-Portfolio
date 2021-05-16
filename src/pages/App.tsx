@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Waypoint } from 'react-waypoint';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import settings from '../data/settings.json';
+// import CssBaseline from '@material-ui/core/CssBaseline';
+// import settings from '../data/settings.json';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import About from '../components/About';
@@ -35,7 +35,7 @@ const App = () => {
       <About
         id="about"
         className={`${
-          bannerEntered
+          aboutEntered
             ? `${sectionAnimatedClass} animate__backInDown`
             : 'is-hidden'
         }`}

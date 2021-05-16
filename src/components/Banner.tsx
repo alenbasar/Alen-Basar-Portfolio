@@ -1,12 +1,11 @@
 import React, { HTMLAttributes } from 'react';
 import { Link } from 'react-scroll';
 import { ScrollSettings } from '../constants/scrollSettings';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 import Particles from 'react-particles-js';
 // import ParticleConfig from '../data/particlesjs-config';
 
 export type BannerContent = {
-  background: string;
   heading: string;
   subheading: string[];
   cta: string;
@@ -19,7 +18,7 @@ type Props = {
 
 const Banner = (props: Props) => {
   const { className = '', content, pageTitle, ...restProps } = props;
-  const { background, heading, subheading, cta, ctaLink } = content;
+  const { heading, subheading, cta, ctaLink } = content;
 
   return (
     <section className={`c-banner ${className}`} {...restProps}>

@@ -36,7 +36,7 @@ const About = (props: Props) => {
           {cta}
         </Link>
       </div>
-      <img className="c-about__image" src={image} alt="about page image" />
+      <img className="c-about__image" src={image} alt="about page" />
       {/* <video
         className="c-about__background"
         src={image}

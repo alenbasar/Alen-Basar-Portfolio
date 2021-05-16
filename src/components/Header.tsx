@@ -1,12 +1,6 @@
 import React, { useState, useEffect, HTMLAttributes } from 'react';
 import Dompurify from 'dompurify';
-import {
-  MenuItem,
-  hamburgerIcon,
-  mobileMenu,
-  navLogo,
-  desktopMenu,
-} from '../../src/constants/menu';
+import { MenuItem, desktopMenu } from '../../src/constants/menu';
 import { Link } from 'react-scroll';
 import { ScrollSettings } from '../constants/scrollSettings';
 import Typewriter from 'typewriter-effect';
@@ -15,7 +9,7 @@ type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
 const Header = (props: Props) => {
   const { className = '', logo, ...restProps } = props;
   const [floating, setFloating] = useState(false);
-  const [drawerActive, setDrawerActive] = useState(false);
+  // const [drawerActive, setDrawerActive] = useState(false);
 
   const scrollHandler = () => {
     setFloating(window.scrollY >= 20);
