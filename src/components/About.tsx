@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react';
-import { Link } from 'react-scroll';
-import { ScrollSettings } from '../constants/scrollSettings';
+// import { Link } from 'react-scroll';
+// import { ScrollSettings } from '../constants/scrollSettings';
 
 export type AboutContentProps = {
   image: string;
@@ -28,13 +28,14 @@ const About = (props: Props) => {
             {about}
           </h3>
         ))}
-        <Link
+        <a
           className="c-about__about-info-cta o-button--alternative"
-          to={ctaLink}
-          {...ScrollSettings}
+          href={ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {cta}
-        </Link>
+        </a>
       </div>
       <img className="c-about__image" src={image} alt="about page" />
       {/* <video
