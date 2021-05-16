@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@types/dompurify": "^2.2.2",
     "@types/react-scroll": "^1.8.2"
   }
 }
