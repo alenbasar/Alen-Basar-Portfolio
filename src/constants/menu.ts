@@ -38,7 +38,7 @@ export const desktopMenu: MenuItem[] = [
   { key: 'contact', to: 'contact', label: 'Contact' },
   {
     key: 'resume',
-    link: 'https://storage.cloud.google.com/portfolio_take1/Alen_Basar-Resume.pdf',
+    link: 'https://storage.googleapis.com/portfolio_take1/Alen_Basar-Resume.pdf',
     label: 'Resume',
   },
 ];
