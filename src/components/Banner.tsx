@@ -1,8 +1,8 @@
-import React, { HTMLAttributes } from 'react';
-import { Link } from 'react-scroll';
-import { ScrollSettings } from '../constants/scrollSettings';
+import React, { HTMLAttributes } from "react";
+import { Link } from "react-scroll";
+import { ScrollSettings } from "../constants/scrollSettings";
 // import Typewriter from 'typewriter-effect';
-import Particles from 'react-particles-js';
+import Particles from "react-particles-js";
 // import ParticleConfig from '../data/particlesjs-config';
 
 export type BannerContent = {
@@ -17,7 +17,7 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Banner = (props: Props) => {
-  const { className = '', content, pageTitle, ...restProps } = props;
+  const { className = "", content, pageTitle, ...restProps } = props;
   const { heading, subheading, cta, ctaLink } = content;
 
   return (
@@ -64,12 +64,12 @@ const Banner = (props: Props) => {
               value: 2,
             },
             color: {
-              value: '#b5179e',
+              value: "#b5179e",
             },
             lineLinked: {
               enable: true,
               distance: 210,
-              color: '#b5179e',
+              color: "#b5179e",
               opacity: 1,
               width: 1.3,
             },
@@ -91,14 +91,15 @@ const Banner = (props: Props) => {
             move: {
               enable: true,
               speed: 1,
-              outMode: 'bounce',
+              bounce: true,
+              outMode: "bounce",
             },
           },
           interactivity: {
             events: {
               onhover: {
                 enable: false,
-                mode: 'repulse',
+                mode: "repulse",
               },
             },
           },
@@ -108,7 +109,6 @@ const Banner = (props: Props) => {
             },
           },
         }}
-        width="1920px"
       />
     </section>
   );
