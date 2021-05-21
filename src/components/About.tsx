@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from "react";
 // import { Link } from 'react-scroll';
 // import { ScrollSettings } from '../constants/scrollSettings';
 
@@ -15,7 +15,7 @@ type Props = {
   content: AboutContentProps;
 } & HTMLAttributes<HTMLDivElement>;
 const About = (props: Props) => {
-  const { className = '', content, ...restProps } = props;
+  const { className = "", content, ...restProps } = props;
   const { image, heading, subheading, aboutText, cta, ctaLink } = content;
 
   return (
