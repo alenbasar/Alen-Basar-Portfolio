@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Waypoint } from "react-waypoint";
-// import CssBaseline from '@material-ui/core/CssBaseline';
-// import settings from '../data/settings.json';
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import About from "../components/About";
@@ -32,7 +30,7 @@ const App = () => {
         pageTitle
         content={banner}
       />
-      <br></br>
+
       <Waypoint onEnter={() => setAboutEntered(true)} />
       <About
         id="about"

@@ -1,7 +1,7 @@
 export const ScrollSettings = {
-  activeClass: 'is-active',
+  activeClass: "is-active",
   spy: true,
   smooth: true,
-  duration: 300,
-  offset: -130,
+  duration: 1000,
+  offset: -120,
 };

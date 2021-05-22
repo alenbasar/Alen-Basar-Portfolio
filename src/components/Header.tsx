@@ -1,13 +1,13 @@
-import React, { useState, useEffect, HTMLAttributes } from 'react';
-import Dompurify from 'dompurify';
-import { MenuItem, desktopMenu } from '../../src/constants/menu';
-import { Link } from 'react-scroll';
-import { ScrollSettings } from '../constants/scrollSettings';
-import Typewriter from 'typewriter-effect';
+import React, { useState, useEffect, HTMLAttributes } from "react";
+import Dompurify from "dompurify";
+import { MenuItem, desktopMenu } from "../../src/constants/menu";
+import { Link } from "react-scroll";
+import { ScrollSettings } from "../constants/scrollSettings";
+import Typewriter from "typewriter-effect";
 
 type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
 const Header = (props: Props) => {
-  const { className = '', logo, ...restProps } = props;
+  const { className = "", logo, ...restProps } = props;
   const [floating, setFloating] = useState(false);
   // const [drawerActive, setDrawerActive] = useState(false);
 
@@ -15,8 +15,8 @@ const Header = (props: Props) => {
     setFloating(window.scrollY >= 20);
   };
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.addEventListener('scroll', scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.addEventListener("scroll", scrollHandler);
   });
 
   const renderLink = (menuItem: MenuItem) => {
@@ -46,7 +46,7 @@ const Header = (props: Props) => {
   return (
     <React.Fragment>
       <header
-        className={`c-header${floating ? ' is-floating' : ''}${className}`}
+        className={`c-header${floating ? " is-floating" : ""}${className}`}
         {...restProps}
       >
         <ul className="is-desktop-only">
@@ -58,10 +58,10 @@ const Header = (props: Props) => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('Alen_Basar')
+                  .typeString("Alen_Basar")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString('Developer')
+                  .typeString("Software_Developer")
                   .pauseFor(2000)
                   .start();
               }}

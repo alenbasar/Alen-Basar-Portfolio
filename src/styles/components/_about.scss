@@ -5,14 +5,14 @@
   height: 44vw;
   width: fit-content;
   // margin: 5px 0px;
-  margin: 15px auto;
+  margin: 50px auto;
   padding: 10px;
   // overflow: hidden;
   // border-radius: 0.5rem;
   .c-about__image {
     position: relative;
     width: 50%;
-    height: 42vw;
+    height: 85%;
     object-fit: cover;
     // height: 50%;
     border-radius: 3rem;
@@ -33,7 +33,7 @@
     // justify-content: space-between;
     width: 90%;
     // margin: auto;
-
+    // line-height: 90px;
     height: 100%;
     color: transparentize($color-navigation-font, 0.19);
     font-size: 2rem;
@@ -52,7 +52,9 @@
     }
     &-text {
       width: 70%;
-      line-height: 1.5rem;
+      // height: 10%;
+      line-height: 1.7rem;
+      font-size: 1.4rem;
       &::selection {
         background-color: #b5179d65;
       }
