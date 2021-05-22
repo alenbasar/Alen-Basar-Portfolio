@@ -51,7 +51,7 @@
     // background: transparentize($color: $color-background, $amount: 0.1);
     transition: all 0.2s ease-in;
     margin: 0.6rem auto 0.2rem;
-    border-radius: 50px;
+    border-radius: 3rem;
   }
   .is-desktop-only {
     .c-header-logo span {
@@ -62,7 +62,7 @@
       font-size: 2em;
       font-family: $font-primary;
       // margin: auto;
-      padding: 1px;
+      // padding: 1px;
 
       // align-self: center;
       // background-color: black;

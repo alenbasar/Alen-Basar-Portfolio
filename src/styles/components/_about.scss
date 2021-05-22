@@ -11,8 +11,8 @@
   // border-radius: 0.5rem;
   .c-about__image {
     position: relative;
-    width: 50%;
-    height: 85%;
+    width: 60rem;
+    height: 50rem;
     object-fit: cover;
     // height: 50%;
     border-radius: 3rem;
@@ -42,12 +42,12 @@
       // align-self: flex-start;
       justify-self: baseline;
       margin-top: 0;
-      margin-bottom: 5px;
+      // margin-bottom: 5px;
       user-select: none;
       // flex: 1 2 0;
     }
     &-subheading {
-      margin-bottom: 50px;
+      margin-bottom: 3rem;
       user-select: none;
     }
     &-text {
@@ -63,11 +63,11 @@
       }
     }
     &-cta {
-      border: 1px solid #b5179d;
+      border: 1px solid transparentize($color-navigation-font, 0.19);
       color: transparentize($color-navigation-font, 0.19);
-      padding: 20px 0px;
+      padding: 1rem 0;
       width: 20rem;
-      margin-top: 50px;
+      margin-top: 3rem;
       text-align: center;
       font-size: 1rem;
       border-radius: 1rem;
