@@ -43,6 +43,8 @@ const App = () => {
       />
 
       <Waypoint onEnter={() => setSkillsEntered(true)} />
+      <br />
+      <br />
       <Skills
         id="skills"
         className={`${
@@ -52,6 +54,8 @@ const App = () => {
         }`}
         content={skills}
       />
+      <br />
+      <br />
     </React.Fragment>
   );
 };
