@@ -1,10 +1,10 @@
 .c-banner {
-  width: 100%;
-  height: 44vw;
+  // width: 80%;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 1px auto;
+  margin: auto;
   // margin: 10px auto;
   // border-radius: 1rem;
   // border: 1px solid black;
@@ -12,15 +12,16 @@
   position: relative;
   // padding: 2rem 1.5rem;
   // min-height: 15rem;
-  max-width: 100%;
+  max-width: 118.75rem;
   border-radius: 0 0 3rem 3rem;
   // height: 1000px;
   font-family: $font-primary;
   // margin: 0;
   // top: 0;
   &__particles {
+    max-width: 118.75rem;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     // position: fixed;
@@ -30,12 +31,12 @@
     // height: 100%;
     position: absolute;
     // left: 100px;
-    top: 0;
-    bottom: 0;
+    // top: 0;
+    // bottom: 0;
     // padding-top: 15%;
     // padding-left: -10px;
     // width: 100%;
-    height: inherit;
+    height: 50rem;
     margin: auto;
     // padding: auto;
     // text-align: center;
@@ -62,6 +63,7 @@
     &-title {
       color: transparentize($color-navigation-font, 0.19);
       // width: 80%;
+      max-width: 100%;
       // margin-bottom: 0.7rem;
       text-align: center;
       font-size: 4em;

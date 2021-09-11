@@ -1,18 +1,21 @@
 .c-about {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: fit-content;
-  width: fit-content;
+  // justify-content: space-between;
+  // height: fit-content;
+  width: 80%;
+  max-width: 118.75rem;
   // margin: 5px 0px;
-  margin: 1rem auto;
+  margin: auto;
   // padding: 10px;
   // overflow: hidden;
   // border-radius: 0.5rem;
   .c-about__image {
     position: relative;
-    width: 60rem;
-    height: 50rem;
+    max-width: 50%;
+    width: 50%;
+    // padding: 2rem;
+    // height: 50rem;
     object-fit: cover;
     // height: 50%;
     border-radius: 3rem;
@@ -25,23 +28,25 @@
     // -ms-user-select: none;
   }
   .c-about__about-info {
-    position: relative;
+    // position: relative;
     // background-color: rgba(0, 0, 0, 0.438);
     display: flex;
     flex-direction: column;
+    // max-width: 500rem;
     align-items: center;
+    // left: 0;
     // justify-content: space-between;
-    width: 90%;
-    // margin: auto;
+    // width: 100%;
+    margin: auto 2rem;
     // line-height: 90px;
-    height: 100%;
+    // height: 100%;
     color: transparentize($color-navigation-font, 0.19);
-    font-size: 2rem;
+    font-size: 0.1rem;
     &-heading {
-      font-size: 4rem;
+      font-size: 2.5rem;
       // align-self: flex-start;
-      justify-self: baseline;
-      margin-top: 0;
+      // justify-self: baseline;
+      // margin-top: 0;
       // margin-bottom: 5px;
       user-select: none;
       // flex: 1 2 0;
@@ -51,10 +56,20 @@
       user-select: none;
     }
     &-text {
-      width: 70%;
+      // width: 70%;
       // height: 10%;
-      line-height: 1.7rem;
-      font-size: 1.4rem;
+      line-height: 1.8rem;
+      &:nth-of-type(3) {
+        // color: pink;
+        // text-align: left;
+        align-self: flex-start;
+      }
+      &:nth-of-type(5) {
+        // color: pink;
+        // text-align: left;
+        align-self: flex-start;
+      }
+      // font-size: 1.4rem;
       &::selection {
         background-color: #b5179d65;
       }

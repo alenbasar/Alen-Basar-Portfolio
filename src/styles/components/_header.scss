@@ -4,7 +4,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 2em;
+  max-width: 118.75rem;
   background: rgb(96, 5, 67);
+  margin: auto;
   // background: linear-gradient(
   //   90deg,
   //   rgba(96, 5, 67, 0.9) 8%,
@@ -12,13 +14,13 @@
   //   rgba(7, 43, 99, 0.9) 88%
   // );
   background-color: (transparentize($color-background, 0.2));
-  max-width: 100%;
+  // max-width: 100%;
   // margin: 10px;
   left: 0;
   right: 0;
   font-size: 1em;
   transition: all 0.2s ease-in-out;
-  z-index: 1;
+  // z-index: 1;
   user-select: none;
   a {
     // align-self: flex-start;
