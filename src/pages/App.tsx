@@ -5,8 +5,9 @@ import Banner from "../components/Banner";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import data from "../data/settings.json";
+import Footer from "../components/Footer";
 
-const { banner, about, skills } = data.homepage;
+const { banner, about, skills, footer } = data.homepage;
 
 const App = () => {
   const [bannerEntered, setBannerEntered] = useState(false);
@@ -56,6 +57,7 @@ const App = () => {
       />
       <br />
       <br />
+      <Footer content={footer} />
     </React.Fragment>
   );
 };

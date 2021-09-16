@@ -50,6 +50,9 @@
           ]
         }
       ]
+    },
+    "footer": {
+      "copyright": "Copyright©2021 Alen Basar"
     }
   }
 }

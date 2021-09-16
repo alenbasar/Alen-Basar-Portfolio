@@ -1,0 +1,25 @@
+.c-footer {
+  width: 80%;
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  background-color: (transparentize(black, 0.2));
+  border-radius: 1rem 1rem 0 0;
+  font-family: $font-primary;
+  max-width: 118.75rem;
+  a {
+    margin-right: 1.5rem;
+    color: white;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  p {
+    color: white;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

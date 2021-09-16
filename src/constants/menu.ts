@@ -44,7 +44,15 @@ export const desktopMenu: MenuItem[] = [
 ];
 
 export const footerMenu: MenuItem[] = [
-  { key: "f-github", link: "", label: "GitHub" },
-  { key: "f-linkedin", link: "", label: "LinkedIn" },
-  { key: "f-resume", link: "", label: "My Resume" },
+  { key: "f-github", link: "https://github.com/alenbasar", label: "GitHub" },
+  {
+    key: "f-linkedin",
+    link: "https://www.linkedin.com/in/alen-basar-54b9b220b/",
+    label: "LinkedIn",
+  },
+  {
+    key: "f-resume",
+    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Alen_Basar-Resume.pdf",
+    label: "My Resume",
+  },
 ];
