@@ -60,26 +60,30 @@ const Showcase = (props: Props) => {
               <div className="c-showcase__grid__card-cta">
                 <ul>
                   <li>
-                    <a
-                      href={website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      dangerouslySetInnerHTML={{
-                        __html: Dompurify.sanitize(content.icons.link),
-                      }}
-                      className="c-showcase__grid__card-cta-link"
-                    ></a>
+                    {website && (
+                      <a
+                        href={website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        dangerouslySetInnerHTML={{
+                          __html: Dompurify.sanitize(content.icons.link),
+                        }}
+                        className="c-showcase__grid__card-cta-link"
+                      ></a>
+                    )}
                   </li>
                   <li>
-                    <a
-                      href={sourceCode}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      dangerouslySetInnerHTML={{
-                        __html: Dompurify.sanitize(content.icons.git),
-                      }}
-                      className="c-showcase__grid__card-cta-git"
-                    ></a>
+                    {sourceCode && (
+                      <a
+                        href={sourceCode}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        dangerouslySetInnerHTML={{
+                          __html: Dompurify.sanitize(content.icons.git),
+                        }}
+                        className="c-showcase__grid__card-cta-git"
+                      ></a>
+                    )}
                   </li>
                 </ul>
                 {/* {website && (
