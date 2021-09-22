@@ -21,10 +21,10 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Showcase = (props: Props) => {
-  const { content, ...restProps } = props;
+  const { className = "", content, ...restProps } = props;
 
   return (
-    <section className={`c-showcase`} {...restProps}>
+    <section className={`c-showcase ${className}`} {...restProps}>
       <h1 className="c-showcase__title">{content.heading}</h1>
       <div className="c-showcase__grid">
         {content.contents.map(

@@ -1,17 +1,18 @@
 .c-showcase {
-  width: 90%;
+  // background-color: black;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  max-width: 100rem;
+  max-width: 118.75rem;
 
   &__title {
     text-align: center;
     margin: auto;
     margin-bottom: 1.5rem;
-    // width: 80%;
+    width: 80%;
   }
 
   &__grid {
@@ -30,7 +31,7 @@
         height: 100%;
         position: absolute;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 0.3rem;
         cursor: pointer;
 
         &-wrapper {
