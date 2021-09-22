@@ -13,6 +13,7 @@ function Lightbox(props: Props) {
   return (
     <React.Fragment>
       <img
+        alt=""
         className={imgClassName || ""}
         src={views[0].source as string}
         onClick={() => setToggle(!toggle)}
