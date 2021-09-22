@@ -21,7 +21,7 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Showcase = (props: Props) => {
-  const { className = "", content, ...restProps } = props;
+  const { content, ...restProps } = props;
 
   return (
     <section className={`c-showcase`} {...restProps}>
