@@ -1,0 +1,8 @@
+.react-images__view-image {
+  width: 90%;
+  border-radius: 1.5rem;
+
+  &#{&} {
+    max-width: 120rem;
+  }
+}

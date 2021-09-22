@@ -7,7 +7,9 @@
   align-items: center;
   margin: auto;
   max-width: 118.75rem;
-
+  .react-images {
+    border-radius: 1rem;
+  }
   &__title {
     text-align: center;
     margin: auto;
@@ -24,14 +26,17 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
+      border-radius: 1rem;
       width: 100%;
-
+      // border-bottom: 1px solid black;
+      border-top: none;
       &-image {
         width: 100%;
         height: 100%;
         position: absolute;
         object-fit: cover;
-        border-radius: 0.3rem;
+        border-radius: 0.5rem;
+        // border: 1px solid black;
         cursor: pointer;
 
         &-wrapper {
@@ -44,10 +49,14 @@
 
       &-content {
         flex: 1;
-
+        padding: 0.5rem;
+        line-height: 1rem;
         &-title {
           margin: 0;
-
+          color: black;
+          overflow: hidden;
+          align-self: center;
+          text-align: center;
           &:before {
             content: none;
           }
@@ -60,6 +69,8 @@
 
       &-stack {
         display: flex;
+        font-weight: bold;
+        user-select: none;
         // white-space: nowrap;
         // align-items: space-between;
         justify-content: center;
@@ -68,6 +79,7 @@
         overflow: hidden;
         margin-top: 0.2rem;
         // text-align: center;
+
         span {
           display: inline-block;
           padding: 0.5rem 0.5rem;
@@ -82,19 +94,67 @@
       }
 
       &-cta {
-        margin-top: 0.4rem;
-        text-align: center;
-        path {
-          fill: black;
-        }
-        a {
-          padding-right: 0.4rem;
-          font-size: 1.2rem;
-
-          &:before {
-            content: none;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            // width: rem;
+            padding: 0.3rem;
+            a {
+              width: 1.5rem;
+              overflow: hidden;
+              transition: all 0.2s ease-in-out;
+              &:hover {
+                transform: scale(1.2);
+              }
+              path {
+                fill: black;
+              }
+              &:before {
+                content: none;
+              }
+            }
           }
         }
+        // margin-top: 0.4rem;
+        // width: 3rem;
+        // height: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // overflow: hidden;
+        // text-align: center;
+        // path {
+        //   fill: $color-navigation-font;
+        //   stroke: $color-accent;
+        //   width: 1rem;
+        // }
+        // &-git {
+        //   path {
+        //     fill: black;
+        //   }
+        //   &:hover {
+        //     path {
+        //       transform: scale(1.5);
+        //     }
+        //   }
+        // }
+
+        // a {
+        //   display: block;
+        //   overflow: hidden;
+        //   // padding-right: 0.4rem;
+        //   // padding: 0.3rem;
+        //   width: 2rem;
+        //   // height: 1rem;
+        //   // max-width: 5rem;
+        //   // font-size: 1.2rem;
+
+        //   &:before {
+        //     content: none;
+        //   }
+        // }
       }
     }
   }

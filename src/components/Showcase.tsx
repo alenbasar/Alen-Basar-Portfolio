@@ -2,6 +2,7 @@ import React, { HTMLAttributes } from "react";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Dompurify from "dompurify";
 import Lightbox from "./Lightbox";
 
 export type ShowcaseContent = {
@@ -14,6 +15,10 @@ export type ShowcaseContent = {
     website?: string;
     sourceCode?: string;
   }[];
+  icons: {
+    git: string;
+    link: string;
+  };
 };
 
 type Props = {
@@ -56,20 +61,36 @@ const Showcase = (props: Props) => {
                 ))}
               </div>
               <div className="c-showcase__grid__card-cta">
-                {website && (
-                  <a href={website} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLink} className="svg-link" />
-                  </a>
+                <ul>
+                  <li>
+                    <a
+                      href={website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      dangerouslySetInnerHTML={{
+                        __html: Dompurify.sanitize(content.icons.link),
+                      }}
+                      className="c-showcase__grid__card-cta-link"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href={sourceCode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      dangerouslySetInnerHTML={{
+                        __html: Dompurify.sanitize(content.icons.git),
+                      }}
+                      className="c-showcase__grid__card-cta-git"
+                    ></a>
+                  </li>
+                </ul>
+                {/* {website && (
+                  
                 )}
                 {sourceCode && (
-                  <a
-                    href={sourceCode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faGithub} className="svg-git" />
-                  </a>
-                )}
+                  
+                )} */}
               </div>
             </div>
           )
