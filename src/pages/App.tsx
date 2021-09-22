@@ -5,14 +5,16 @@ import Banner from "../components/Banner";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import data from "../data/settings.json";
+import Showcase from "../components/Showcase";
 import Footer from "../components/Footer";
 
-const { banner, about, skills, footer } = data.homepage;
+const { banner, about, skills, showcase, footer } = data.homepage;
 
 const App = () => {
   const [bannerEntered, setBannerEntered] = useState(false);
   const [aboutEntered, setAboutEntered] = useState(false);
   const [skillsEntered, setSkillsEntered] = useState(false);
+  const [showcaseEntered, setShowcaseEntered] = useState(false);
 
   const sectionAnimatedClass = "animate__animated is-section-animated";
 
@@ -31,6 +33,8 @@ const App = () => {
         pageTitle
         content={banner}
       />
+      <Waypoint onEnter={() => setBannerEntered(true)} />
+      <br />
 
       <Waypoint onEnter={() => setAboutEntered(true)} />
       <About
@@ -42,10 +46,10 @@ const App = () => {
         }`}
         content={about}
       />
+      <Waypoint onEnter={() => setAboutEntered(true)} />
+      <br />
 
       <Waypoint onEnter={() => setSkillsEntered(true)} />
-      <br />
-      <br />
       <Skills
         id="skills"
         className={`${
@@ -55,8 +59,22 @@ const App = () => {
         }`}
         content={skills}
       />
+      <Waypoint onEnter={() => setSkillsEntered(true)} />
       <br />
+
+      <Waypoint onEnter={() => setShowcaseEntered(true)} />
+      <Showcase
+        id="showcase"
+        className={`${
+          showcaseEntered
+            ? `${sectionAnimatedClass} animate__backInDown`
+            : "is-hidden"
+        }`}
+        content={showcase}
+      />
+      <Waypoint onEnter={() => setShowcaseEntered(true)} />
       <br />
+
       <Footer content={footer} />
     </React.Fragment>
   );

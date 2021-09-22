@@ -1,0 +1,158 @@
+.c-showcase {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100rem;
+
+  &__title {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: 80%;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0rem;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      width: 100%;
+
+      &-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        border-radius: 1rem;
+        cursor: pointer;
+
+        &-wrapper {
+          position: relative;
+          padding-bottom: 60%;
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &-content {
+        flex: 1;
+
+        &-title {
+          margin: 0;
+
+          &:before {
+            content: none;
+          }
+
+          h3 {
+            margin-bottom: 0.3rem;
+          }
+        }
+      }
+
+      &-stack {
+        display: flex;
+        // white-space: nowrap;
+        // align-items: space-between;
+        justify-content: center;
+        width: 100%;
+        // text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 0.2rem;
+        // text-align: center;
+        span {
+          display: inline-block;
+          padding: 0.5rem 0.5rem;
+          // background: $color-primary;
+          color: transparentize($color-navigation-font, 0.19);
+          border: 1px solid $color-accent;
+          border-radius: 0.15rem;
+          margin: 0.3rem;
+          // margin-right: 0.4rem;
+          // font-size: 0.67rem;
+        }
+      }
+
+      &-cta {
+        margin-top: 0.4rem;
+        text-align: center;
+        path {
+          fill: black;
+        }
+        a {
+          padding-right: 0.4rem;
+          font-size: 1.2rem;
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(xsmall) {
+    &__grid {
+      padding: 0rem;
+    }
+
+    &__title {
+      max-width: 20rem;
+    }
+  }
+
+  @include media(small) {
+    &__title {
+      margin-bottom: 2rem;
+    }
+
+    &__grid {
+      padding: 0rem;
+      flex-direction: row;
+      justify-content: center;
+
+      &__card {
+        width: 45%;
+        margin: 0 2.5%;
+        margin-bottom: 1rem;
+
+        &-icon {
+          width: 5rem;
+        }
+      }
+    }
+  }
+
+  @include media(medium) {
+    &__title {
+      margin-bottom: 3rem;
+    }
+
+    &__grid {
+      padding: 0rem;
+
+      &__card {
+        width: 30%;
+        margin: 0 1.5%;
+        margin-bottom: 1.8rem;
+
+        &-icon {
+          width: 6rem;
+        }
+      }
+    }
+  }
+
+  @include media(large) {
+    &__grid {
+      padding: 0rem;
+    }
+  }
+}

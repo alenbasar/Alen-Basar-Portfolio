@@ -51,6 +51,66 @@
         }
       ]
     },
+    "showcase": {
+      "heading": "Some of my projects",
+      "contents": [
+        {
+          "title": "RetroRecords",
+          "description": [
+            "This is a retro LP record store which includes a product page, forum, cart and checkout."
+          ],
+          "stack": ["PHP", "HTML5", "SCSS", "MariaDB", "JavaScript"],
+          "website": "",
+          "sourceCode": "https://github.com/alenbasar/RetroRecords",
+          "images": [
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/RetroRecords/Home.JPG",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/RetroRecords/Forum1.JPG",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/RetroRecords/Code.JPG"
+          ]
+        },
+        {
+          "title": "Deuces (Dice Game)",
+          "description": [
+            "This is a multiplayer dice game, it is played by two players who score points by rolling the dice, if dice rolls 1, the current player loses all his points and the player has an option to save his current score if they don't feel lucky. Whoever scores 100 points wins the game."
+          ],
+          "stack": ["JavaScript", "HTML5", "CSS3"],
+          "website": "https://alendicegame.netlify.app/",
+          "sourceCode": "https://github.com/alenbasar/Deuces",
+          "images": [
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Deuces/Game.JPG",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Deuces/Code.JPG",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Deuces/flowchart.png"
+          ]
+        },
+        {
+          "title": "Portfolio",
+          "description": [
+            "My personal portfolio in the form of SPA made in React, featuring modern design and animations."
+          ],
+          "stack": ["TypeScript", "ReactJS", "SCSS", "HTML5", "AWS"],
+          "website": "https://alenbasar.netlify.app/",
+          "sourceCode": "https://github.com/alenbasar/PortfolioV1",
+          "images": [
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Portfolio/Home.jpg",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Portfolio/About.jpg",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Portfolio/Code.JPG"
+          ]
+        },
+        {
+          "title": "Burger Maker",
+          "description": [
+            "This is burger building app where user can select ingredients and have it displayed with illustrated css artstyle, user also has an option to order the burger."
+          ],
+          "stack": ["JavaScript", "ReactJS", "CSS3", "HTML5"],
+          "website": "",
+          "sourceCode": "https://github.com/alenbasar/Burger-Maker",
+          "images": [
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Burger+Maker/Burger+Builder.JPG",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/Burger+Maker/Code.JPG"
+          ]
+        }
+      ]
+    },
     "footer": {
       "copyright": "Copyright©2021 Alen Basar"
     }
