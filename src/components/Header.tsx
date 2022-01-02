@@ -68,16 +68,7 @@ const Header = (props: Props) => {
             />
           </div>
 
-          {/* <Link
-            className="c-header-logo"
-            to="home"
-            {...ScrollSettings}
-            dangerouslySetInnerHTML={{ __html: Dompurify.sanitize() }}
-          /> */}
-
-          {/* {navLogo.map((m) => (
-            <React.Fragment key={m.key}>{renderLink(m)}</React.Fragment>
-          ))} */}
+        
         </ul>
         <ul className="is-desktop-only">
           {desktopMenu.map((m) => (
