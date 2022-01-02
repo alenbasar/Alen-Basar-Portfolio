@@ -7,8 +7,9 @@ import Skills from "../components/Skills";
 import data from "../data/settings.json";
 import Showcase from "../components/Showcase";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
-const { banner, about, skills, showcase, footer } = data.homepage;
+const { banner, about, skills, showcase, contact, footer } = data.homepage;
 
 const App = () => {
   const [bannerEntered, setBannerEntered] = useState(false);
@@ -74,6 +75,7 @@ const App = () => {
       />
       <Waypoint onEnter={() => setShowcaseEntered(true)} />
       <br />
+      <Contact content={contact} />
 
       <Footer content={footer} />
     </React.Fragment>
