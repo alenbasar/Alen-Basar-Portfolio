@@ -22,7 +22,7 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Contact = (props: Props) => {
-  const { className = "", content, ...restProps } = props;
+  const { content } = props;
   const { heading, description, cta, ctaLink, form } = content;
 
   const [firstName, setFirstName] = useState("");
@@ -30,8 +30,8 @@ const Contact = (props: Props) => {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [mailResponse, setMailResponse] = useState("");
-  const [errorMailResponse, setErrorMailResponse] = useState("");
+  //   const [mailResponse, setMailResponse] = useState("");
+  //   const [errorMailResponse, setErrorMailResponse] = useState("");
 
   const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
