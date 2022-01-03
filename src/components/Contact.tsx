@@ -1,5 +1,5 @@
 import React, { useState, HTMLAttributes } from "react";
-import { MAIL_SERVICE } from "../constants/api";
+import { emailService } from "../constants/api";
 
 export type ContactContent = {
   heading: string;
@@ -33,21 +33,21 @@ const Contact = (props: Props) => {
   //   const [mailResponse, setMailResponse] = useState("");
   //   const [errorMailResponse, setErrorMailResponse] = useState("");
 
-  const submitHandler = async (e: React.FormEvent) => {
+  async function submitHandler(e: React.FormEvent) {
     e.preventDefault();
 
     const emailData = {
-      firstName,
-      lastName,
-      email,
-      message,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      message: message,
       companyName: company,
       agent: "noreply.alenbasar.d@gmail.com",
       receiver: "alenbasar.d@gmail.com",
     };
 
     try {
-      const data = await fetch(MAIL_SERVICE, {
+      const data = await fetch(emailService, {
         method: "POST",
         body: JSON.stringify(emailData),
       });
@@ -56,8 +56,9 @@ const Contact = (props: Props) => {
       console.log("message sent");
     } catch (e) {
       console.log("something went wrong");
+      console.log(JSON.stringify(emailData));
     }
-  };
+  }
 
   return (
     <section>
