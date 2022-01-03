@@ -23,7 +23,7 @@ type Props = {
 
 const Contact = (props: Props) => {
   const { content } = props;
-  const { heading, description, cta, ctaLink, form } = content;
+  const { form } = content;
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -62,13 +62,13 @@ const Contact = (props: Props) => {
 
   return (
     <section>
-      <div>
+      {/* <div>
         <h2>{heading}</h2>
         {description.map((dsc) => (
           <p key={dsc}>{dsc}</p>
         ))}
         <a href={ctaLink}>{cta}</a>
-      </div>
+      </div> */}
       <div />
       <form onSubmit={(e) => submitHandler(e)}>
         <h2>{form.heading}</h2>
