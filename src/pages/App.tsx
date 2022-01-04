@@ -8,14 +8,17 @@ import data from "../data/settings.json";
 import Showcase from "../components/Showcase";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import TextOutro from "../components/TextOutro";
 
-const { banner, about, skills, showcase, contact, footer } = data.homepage;
+const { banner, about, skills, showcase, contact, textOutro, footer } =
+  data.homepage;
 
 const App = () => {
   const [bannerEntered, setBannerEntered] = useState(false);
   const [aboutEntered, setAboutEntered] = useState(false);
   const [skillsEntered, setSkillsEntered] = useState(false);
   const [showcaseEntered, setShowcaseEntered] = useState(false);
+  const [contactEntered, setContactEntered] = useState(false);
 
   const sectionAnimatedClass = "animate__animated is-section-animated";
 
@@ -35,7 +38,7 @@ const App = () => {
         content={banner}
       />
       <Waypoint onEnter={() => setBannerEntered(true)} />
-      <br />
+      <div className="o-spacer" />
 
       <Waypoint onEnter={() => setAboutEntered(true)} />
       <About
@@ -48,7 +51,7 @@ const App = () => {
         content={about}
       />
       <Waypoint onEnter={() => setAboutEntered(true)} />
-      <br />
+      <div className="o-spacer" />
 
       <Waypoint onEnter={() => setSkillsEntered(true)} />
       <Skills
@@ -61,7 +64,7 @@ const App = () => {
         content={skills}
       />
       <Waypoint onEnter={() => setSkillsEntered(true)} />
-      <br />
+      <div className="o-spacer" />
 
       <Waypoint onEnter={() => setShowcaseEntered(true)} />
       <Showcase
@@ -74,8 +77,26 @@ const App = () => {
         content={showcase}
       />
       <Waypoint onEnter={() => setShowcaseEntered(true)} />
-      <br />
-      <Contact content={contact} />
+      <div className="o-spacer" />
+      <div className="o-divider" />
+      <div className="o-spacer" />
+      {/* <div className="o-spacer" /> */}
+
+      <Waypoint onEnter={() => setContactEntered(true)} />
+      <Contact
+        className={`${
+          contactEntered
+            ? `${sectionAnimatedClass} animate__backInDown`
+            : "is-hidden"
+        }`}
+        content={contact}
+        id="contact"
+      />
+      <Waypoint onEnter={() => setContactEntered(true)} />
+      <div className="o-spacer" />
+
+      <TextOutro content={textOutro} id="textOutro" />
+      <div className="o-spacer" />
 
       <Footer content={footer} />
     </React.Fragment>

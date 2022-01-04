@@ -22,8 +22,8 @@ type Props = {
 } & HTMLAttributes<HTMLDivElement>;
 
 const Contact = (props: Props) => {
-  const { content } = props;
-  const { form } = content;
+  const { className = "", content, ...restProps } = props;
+  const { heading, description, cta, ctaLink, form } = content;
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -42,9 +42,16 @@ const Contact = (props: Props) => {
       email: email,
       message: message,
       companyName: company,
-      agent: "noreply.alenbasar.d@gmail.com",
+      agent: "alenbasar.d@gmail.com",
       receiver: "alenbasar.d@gmail.com",
+      // subject: "",
     };
+
+    setFirstName("");
+    setLastName("");
+    setCompany("");
+    setEmail("");
+    setMessage("");
 
     try {
       const data = await fetch(emailService, {
@@ -54,6 +61,7 @@ const Contact = (props: Props) => {
       const res = await data.json();
       if (res.error) throw new Error("");
       console.log("message sent");
+      console.log(JSON.stringify(emailData));
     } catch (e) {
       console.log("something went wrong");
       console.log(JSON.stringify(emailData));
@@ -61,16 +69,20 @@ const Contact = (props: Props) => {
   }
 
   return (
-    <section>
-      {/* <div>
-        <h2>{heading}</h2>
+    <section className={`c-contact ${className}`} {...restProps}>
+      <div className="c-contact__intro">
+        <h2 className="c-contact__intro__heading">{heading}</h2>
         {description.map((dsc) => (
-          <p key={dsc}>{dsc}</p>
+          <p key={dsc} className="c-contact__intro__description">
+            {dsc}
+          </p>
         ))}
-        <a href={ctaLink}>{cta}</a>
-      </div> */}
-      <div />
-      <form onSubmit={(e) => submitHandler(e)}>
+        <a href={ctaLink} className="c-contact__intro__cta">
+          {cta}
+        </a>
+      </div>
+      <div className="c-contact__divider" />
+      <form onSubmit={(e) => submitHandler(e)} className="c-contact__form">
         <h2>{form.heading}</h2>
         <p></p>
         <p></p>

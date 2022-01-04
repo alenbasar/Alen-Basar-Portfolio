@@ -38,7 +38,7 @@ export const desktopMenu: MenuItem[] = [
   { key: "contact", to: "contact", label: "Contact" },
   {
     key: "resume",
-    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/alen_basar_resume.pdf",
+    link: "",
     label: "Resume",
   },
 ];
@@ -52,7 +52,7 @@ export const footerMenu: MenuItem[] = [
   },
   {
     key: "f-resume",
-    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/alen_basar_resume.pdf",
+    link: "",
     label: "My Resume",
   },
 ];
