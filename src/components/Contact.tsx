@@ -77,13 +77,16 @@ const Contact = (props: Props) => {
             {dsc}
           </p>
         ))}
-        <a href={ctaLink} className="c-contact__intro__cta">
+        <form action={ctaLink}>
+          <input type="submit" value={cta} className="c-contact__intro__cta" />
+        </form>
+        {/* <Link to={ctaLink} className="c-contact__intro__cta">
           {cta}
-        </a>
+        </Link> */}
       </div>
       <div className="c-contact__divider" />
       <form onSubmit={(e) => submitHandler(e)} className="c-contact__form">
-        <h2>{form.heading}</h2>
+        <h2 className="c-contact__form__heading">{form.heading}</h2>
         <p></p>
         <p></p>
         <input
@@ -105,6 +108,7 @@ const Contact = (props: Props) => {
         />
         <input
           value={email}
+          type="email"
           onChange={(e) => setEmail(e.target.value)}
           placeholder={form.emailPlaceholder}
           required
@@ -116,10 +120,7 @@ const Contact = (props: Props) => {
           rows={5}
           required
         />
-        <button
-          className="c-contact__form-cta o-btn--alternative"
-          type="submit"
-        >
+        <button className="c-contact__form-cta" type="submit">
           {form.cta}
         </button>
       </form>

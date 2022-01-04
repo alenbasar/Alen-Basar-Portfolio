@@ -27,7 +27,7 @@
     font-weight: $font-bold;
     // margin: 0.5em;
     // border-left: 2px solid $color-background;
-    color: transparentize($color-navigation-font, 0.19);
+    color: $color-font-primary;
     // padding: auto 1em;
     font-size: inherit;
     font-family: $font-primary;
@@ -58,7 +58,7 @@
   .is-desktop-only {
     .c-header-logo span {
       bottom: 0;
-      color: transparentize($color-navigation-font, 0.19);
+      color: $color-font-primary;
 
       font-weight: bolder;
       font-size: 2em;

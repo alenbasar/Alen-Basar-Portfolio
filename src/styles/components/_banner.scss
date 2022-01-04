@@ -38,7 +38,7 @@
     }
 
     &-title {
-      color: transparentize($color-navigation-font, 0.19);
+      color: transparentize($color-font-primary, 0.19);
       // width: 80%;
       max-width: 100%;
       // margin-bottom: 0.7rem;
@@ -47,7 +47,7 @@
     }
 
     &-text {
-      color: transparentize($color-navigation-font, 0.19);
+      color: transparentize($color-font-primary, 0.19);
       font-size: 2em;
       text-align: center;
     }
@@ -57,12 +57,12 @@
       margin: 1rem 0 1.2rem;
       font-size: 2em;
       max-height: 200px;
-      color: transparentize($color-navigation-font, 0.19);
+      color: transparentize($color-font-primary, 0.19);
       background-color: transparentize($color-background, 0.25);
       padding: 20px;
       border-radius: 1em;
       transition: all 0.2s ease-in-out;
-      border: 1px solid $color-navigation-font;
+      border: 1px solid $color-font-primary;
       overflow: hidden;
 
       margin-top: 5em;
@@ -71,7 +71,7 @@
       }
       &:hover {
         // background-color: transparent;
-        color: $color-navigation-font;
+        color: $color-font-primary;
         transform: translateY(-5px);
         transition: all 0.2s ease-in-out;
       }

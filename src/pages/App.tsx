@@ -78,8 +78,6 @@ const App = () => {
       />
       <Waypoint onEnter={() => setShowcaseEntered(true)} />
       <div className="o-spacer" />
-      <div className="o-divider" />
-      <div className="o-spacer" />
       {/* <div className="o-spacer" /> */}
 
       <Waypoint onEnter={() => setContactEntered(true)} />
@@ -96,6 +94,7 @@ const App = () => {
       <div className="o-spacer" />
 
       <TextOutro content={textOutro} id="textOutro" />
+      <div className="o-spacer" />
       <div className="o-spacer" />
 
       <Footer content={footer} />

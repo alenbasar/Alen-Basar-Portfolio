@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  // max-width: 118.75rem;
+  max-width: 118.75rem;
   .react-images {
     border-radius: 1rem;
   }
@@ -29,6 +29,7 @@
       margin-bottom: 1rem;
       border-radius: 1rem;
       width: 100%;
+      font-family: $font-primary;
       // border-bottom: 1px solid black;
       border-top: none;
       &-image {
@@ -85,7 +86,7 @@
           display: inline-block;
           padding: 0.5rem 0.5rem;
           // background: $color-primary;
-          color: transparentize($color-navigation-font, 0.19);
+          color: transparentize($color-font-primary, 0.19);
           border: 1px solid $color-accent;
           border-radius: 0.15rem;
           margin: 0.3rem;
