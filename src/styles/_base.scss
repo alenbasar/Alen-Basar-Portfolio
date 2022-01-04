@@ -1,4 +1,3 @@
-// Variables and initializations
 @import "./reset";
 @import "./colors";
 @import "./typography";
@@ -7,7 +6,6 @@
 @import "./react-images";
 @import "./gutter";
 
-// Components
 @import "./components/header";
 @import "./components/banner";
 @import "./components/about";
@@ -19,11 +17,4 @@
 
 .o-spacer {
   height: 8rem;
-  //   background-color: black;
 }
-// .o-divider {
-//   width: 80%;
-//   margin: auto;
-//   height: 0.06rem;
-//   background-color: black;
-// }

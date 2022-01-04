@@ -30,8 +30,6 @@ const Contact = (props: Props) => {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  //   const [mailResponse, setMailResponse] = useState("");
-  //   const [errorMailResponse, setErrorMailResponse] = useState("");
 
   async function submitHandler(e: React.FormEvent) {
     e.preventDefault();
@@ -44,7 +42,6 @@ const Contact = (props: Props) => {
       companyName: company,
       agent: "alenbasar.d@gmail.com",
       receiver: "alenbasar.d@gmail.com",
-      // subject: "",
     };
 
     setFirstName("");

@@ -9,7 +9,6 @@ type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
 const Header = (props: Props) => {
   const { className = "", logo, ...restProps } = props;
   const [floating, setFloating] = useState(false);
-  // const [drawerActive, setDrawerActive] = useState(false);
 
   const scrollHandler = () => {
     setFloating(window.scrollY >= 20);
@@ -67,8 +66,6 @@ const Header = (props: Props) => {
               }}
             />
           </div>
-
-        
         </ul>
         <ul className="is-desktop-only">
           {desktopMenu.map((m) => (

@@ -77,17 +77,13 @@ a {
 
   &.is-active,
   &:hover {
-    // color: white;
     transition: all 0.3s ease-in;
   }
 
   &:before {
-    // padding: 0.01px;
-    // margin-bottom: -2px;
     bottom: 0;
     right: 0;
-    content: '';
-    // margin-bottom: auto;
+    content: "";
     position: absolute;
     width: 100%;
     height: 0.1rem;
@@ -103,7 +99,6 @@ a {
     &:before {
       transform: scale(1, 2);
       color: black;
-      // bottom: -5px;
     }
   }
 }

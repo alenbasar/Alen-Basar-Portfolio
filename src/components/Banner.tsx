@@ -1,9 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import { Link } from "react-scroll";
 import { ScrollSettings } from "../constants/scrollSettings";
-// import Typewriter from 'typewriter-effect';
 import Particles from "react-particles-js";
-// import ParticleConfig from '../data/particlesjs-config';
 
 export type BannerContent = {
   heading: string;
@@ -22,14 +20,6 @@ const Banner = (props: Props) => {
 
   return (
     <section className={`c-banner ${className}`} {...restProps}>
-      {/* <video
-        className="c-banner__video"
-        src={background}
-        autoPlay
-        loop
-        muted
-      ></video> */}
-
       <div className="c-banner__content">
         {pageTitle ? (
           <h1 className="c-banner__content-title">{heading}</h1>

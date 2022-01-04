@@ -1,6 +1,4 @@
 import React, { HTMLAttributes } from "react";
-// import { Link } from 'react-scroll';
-// import { ScrollSettings } from '../constants/scrollSettings';
 
 export type AboutContentProps = {
   image: string;
@@ -38,13 +36,6 @@ const About = (props: Props) => {
         </a>
       </div>
       <img className="c-about__image" src={image} alt="about page" />
-      {/* <video
-        className="c-about__background"
-        src={image}
-        autoPlay
-        loop
-        muted
-      ></video> */}
     </section>
   );
 };
