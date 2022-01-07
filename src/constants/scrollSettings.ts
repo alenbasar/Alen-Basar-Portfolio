@@ -3,5 +3,5 @@ export const ScrollSettings = {
   spy: true,
   smooth: true,
   duration: 500,
-  offset: -120,
+  offset: -130,
 };

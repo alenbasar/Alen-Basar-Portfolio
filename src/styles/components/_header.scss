@@ -1,31 +1,25 @@
 .c-header {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em;
-  max-width: 118.75rem;
-
   margin: auto;
-
+  max-width: 118.75rem;
   background-color: (transparentize($color-background, 0.2));
-
   left: 0;
   right: 0;
   font-size: 1em;
   transition: all 0.2s ease-in-out;
-
   user-select: none;
+  z-index: 1000;
   a {
     font-weight: $font-bold;
-
     color: $color-font-primary;
-
     font-size: inherit;
     font-family: $font-primary;
     overflow: hidden;
     margin: auto 10px;
-
     &:active,
     &:hover {
       color: black;
@@ -34,24 +28,31 @@
 
   &.is-floating {
     position: fixed;
-    display: flex;
-    top: 0;
-    width: 98%;
+    background-color: $color-background;
+    // height: 5rem;
+    // display: flex;
+    // top: 0;
+    // width: 98%;
     z-index: 1;
     box-shadow: 0px 10px 13px -16px rgba(0, 0, 0, 0.75);
-
-    transition: all 0.2s ease-in;
-    margin: 0.6rem auto 0.2rem;
-    border-radius: 3rem;
+    // // background: transparentize($color: $color-background, $amount: 0.1);
+    transition: all 0.1s ease-in;
+    // margin: 0.6rem auto 0.2rem;
+    // border-radius: 3rem;
   }
   .is-desktop-only {
     .c-header-logo span {
       bottom: 0;
-      color: $color-font-primary;
+      color: transparentize($color-font-primary, 0.19);
 
       font-weight: bolder;
       font-size: 2em;
       font-family: $font-primary;
+      // margin: auto;
+      // padding: 1px;
+
+      // align-self: center;
+      // background-color: black;
     }
   }
 }

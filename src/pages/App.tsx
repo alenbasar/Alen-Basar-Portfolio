@@ -25,6 +25,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Header logo={data.logo} />
+      <div className="o-nav-spacer" />
 
       <Waypoint onEnter={() => setBannerEntered(true)} />
       <Banner

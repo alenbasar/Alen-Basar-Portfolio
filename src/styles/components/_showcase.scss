@@ -35,8 +35,14 @@
         position: absolute;
         object-fit: cover;
         border-radius: 0.5rem;
-
         cursor: pointer;
+        transition: all 0.07s ease-in;
+        &:hover {
+          transform: scale(1.05);
+        }
+        &:active:hover {
+          transform: scale(1);
+        }
 
         &-wrapper {
           position: relative;

@@ -1,95 +1,113 @@
 .c-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
   border: 0.05rem solid $color-accent;
   width: 60%;
   margin: auto;
-  padding: 3rem 2% 3.5rem;
+  //   padding: 3rem 2% 3.5rem;
   border-radius: 1rem;
   max-width: 118.75rem;
   font-family: $font-primary;
-  &__intro {
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Heading"
+    "Content";
+
+  &__heading {
+    margin: auto;
+    padding: 1rem;
+  }
+
+  &__content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex-basis: auto;
-    text-align: left;
+    // align-items: center;
+    // margin: auto;
+    // height: 30rem;
 
-    width: 40%;
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      //   align-items: center;
+      justify-content: center;
+      //   flex-basis: auto;
+      text-align: left;
+      line-height: 1.5rem;
+      width: 40%;
 
-    align-items: flex-start;
-    &__heading {
-      font-size: 2rem;
-      color: $color-font-primary;
+      align-items: flex-start;
+      &__heading {
+        font-size: 2rem;
+        color: $color-font-primary;
+      }
+      &__description {
+        font-size: 1rem;
+        color: $color-font-primary;
+      }
+      &__cta {
+        overflow: hidden;
+        font-size: 1rem;
+        cursor: pointer;
+        color: $color-font-primary;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: 1px solid $color-accent;
+        padding: 0.8rem;
+        &:hover {
+          color: black;
+        }
+      }
     }
-    &__description {
-      font-size: 1rem;
-      color: $color-font-primary;
+
+    &__divider {
+      width: 2px;
+      height: 30rem;
+      margin: 2rem;
+      background-color: transparentize($color-font-primary, 1);
+      border-radius: 5rem;
     }
-    &__cta {
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+
+      &__heading {
+        text-align: center;
+        color: $color-font-primary;
+      }
+
+      input {
+        border: 1px solid $color-accent;
+        border-radius: 1rem;
+      }
+
+      textarea {
+        border: 1px solid $color-accent;
+        border-radius: 1rem;
+      }
+    }
+
+    &__form-cta {
       overflow: hidden;
       font-size: 1rem;
 
       cursor: pointer;
       color: $color-font-primary;
-      margin-top: 5rem;
+      margin-top: 0.2rem;
       border-radius: 1rem;
       border: 1px solid $color-accent;
-
+      padding: 0.5rem;
       &:hover {
         color: black;
       }
-    }
-  }
-
-  &__divider {
-    width: 1px;
-    height: 30rem;
-    margin: 2rem;
-    background-color: $color-accent;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-
-    &__heading {
-      text-align: center;
-      color: $color-font-primary;
-    }
-
-    input {
-      border: 1px solid $color-accent;
-      border-radius: 1rem;
-    }
-
-    textarea {
-      border: 1px solid $color-accent;
-      border-radius: 1rem;
-    }
-  }
-
-  &__form-cta {
-    margin: 0.2rem;
-    font-size: 1em;
-    color: transparentize($color-font-primary, 0.19);
-    background-color: transparentize($color-background, 0.25);
-    padding: 0.5rem;
-    border-radius: 1rem;
-    transition: all 0.2s ease-in-out;
-    border: 1px solid $color-accent;
-    overflow: hidden;
-
-    &::before {
-      display: none;
-    }
-    &:hover {
-      color: $color-font-primary;
-      transform: translateY(-1px);
-      transition: all 0.2s ease-in-out;
     }
   }
 }

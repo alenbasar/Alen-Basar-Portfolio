@@ -1,32 +1,28 @@
 .c-about {
   display: flex;
   align-items: center;
-
-  width: 80%;
+  position: relative;
+  // width: 80%;
   max-width: 118.75rem;
 
   margin: auto;
 
   .c-about__image {
-    position: relative;
-    max-width: 50%;
-    width: 50%;
-
-    object-fit: cover;
-
-    border-radius: 3rem;
+    width: 80%;
+    height: 50rem;
+    margin: auto;
+    border-radius: 1rem;
     user-select: none;
   }
   .c-about__about-info {
     display: flex;
     flex-direction: column;
-
-    align-items: center;
-
-    margin: auto 2rem;
-
-    color: transparentize($color-font-primary, 0.19);
-    font-size: 0.1rem;
+    position: absolute;
+    text-shadow: 2.2px 2.2px #000000;
+    width: 40rem;
+    left: 55%;
+    right: 0;
+    color: rgb(255, 255, 255);
     &-heading {
       font-size: 2.5rem;
 
@@ -38,6 +34,7 @@
     }
     &-text {
       line-height: 1.8rem;
+      font-size: 1.05rem;
       &:nth-of-type(3) {
         align-self: flex-start;
       }
@@ -53,24 +50,26 @@
       }
     }
     &-cta {
-      border: 1px solid transparentize($color-font-primary, 0.19);
-      color: transparentize($color-font-primary, 0.19);
+      border: 1px solid white;
+      color: white;
       padding: 1rem 0;
       width: 20rem;
-      margin-top: 3rem;
+      margin-top: 1rem;
       text-align: center;
       font-size: 1rem;
       border-radius: 1rem;
       user-select: none;
       overflow: hidden;
       font-family: $font-primary;
+      text-shadow: 0px 0px #000000;
       &::before {
         display: none;
       }
       &:hover {
-        color: $color-font-primary;
+        color: white;
         transform: translateY(-5px);
         transition: all 0.2s ease-in-out;
+        // text-shadow: 2.2px 2.2px #000000;
       }
     }
   }

@@ -6,10 +6,13 @@
   justify-content: center;
   margin: 2rem auto;
   padding: 6rem;
-  border-top: 1px solid $color-accent;
-  border-bottom: 1px solid $color-accent;
+  // border: 1px solid $color-accent;
+  border-radius: 1rem;
+  // background-color: rgb(255, 255, 255);
+  // border-top: 1px solid $color-accent;
+  // border-bottom: 1px solid $color-accent;
 
-  color: transparentize($color-font-primary, 0.19);
+  // color: transparentize($color-font-primary, 0.19);
   &__heading {
     text-align: center;
     margin-bottom: 5rem;
@@ -18,14 +21,27 @@
   &__grid {
     display: flex;
     justify-content: space-around;
+    // width: 100px;
     &__card {
-      &-icon:nth-of-type(1) {
-        & svg {
-          width: 19rem;
-          height: 15rem;
-          justify-self: center;
-          align-self: center;
+      text-align: center;
+      h2 {
+        font-size: 2rem;
+      }
+      &-icon {
+        width: 25rem;
+        height: 20rem;
+
+        & svg path {
+          fill: transparentize($color-primary, 0);
+          transition: all 0.5s ease-in-out;
+          // stroke: $color-accent;
         }
+        // &:hover {
+        //   & svg path {
+        //     fill: transparentize($color-accent, 0);
+        //     // stroke: $color-accent;
+        //   }
+        // }
       }
 
       &-techs {
@@ -35,6 +51,9 @@
           width: 3rem;
           height: 3rem;
           padding: 0;
+          &:hover {
+            transform: scale(1.02);
+          }
         }
       }
     }

@@ -1,13 +1,16 @@
 .c-banner {
   height: 100%;
-  display: flex;
-  align-items: flex-start;
+  // position: fixed;
+  // top: 6rem;
+  // display: flex;
+  // align-items: flex-start;
   justify-content: center;
   margin: auto;
-  overflow: hidden;
+  // margin-top: 6rem;
+  // overflow: hidden;
   position: relative;
   max-width: 118.75rem;
-  border-radius: 0 0 3rem 3rem;
+  // border-radius: 0 0 3rem 3rem;
   font-family: $font-primary;
   &__particles {
     max-width: 118.75rem;
@@ -56,16 +59,16 @@
       align-self: center;
       margin: 1rem 0 1.2rem;
       font-size: 2em;
-      max-height: 200px;
+      // max-height: 200px;
       color: transparentize($color-font-primary, 0.19);
       background-color: transparentize($color-background, 0.25);
       padding: 20px;
-      border-radius: 1em;
+      border-radius: 1rem;
       transition: all 0.2s ease-in-out;
       border: 1px solid $color-font-primary;
       overflow: hidden;
 
-      margin-top: 5em;
+      // margin-top: 5em;
       &::before {
         display: none;
       }
