@@ -44,7 +44,7 @@ const App = () => {
             id="home"
             className={`${
               bannerEntered
-                ? `${sectionAnimatedClass} animate__backInDown`
+                ? `${sectionAnimatedClass} animate__fadeIn`
                 : "is-hidden"
             }`}
             pageTitle
@@ -53,12 +53,18 @@ const App = () => {
           <Waypoint onEnter={() => setBannerEntered(true)} />
           <div className="o-spacer" />
 
-          <Waypoint onEnter={() => setAboutEntered(true)} />
+          {/* About  */}
+          <Waypoint
+            onEnter={() => setAboutEntered(true)}
+            onLeave={() => setAboutEntered(false)}
+          />
           <About
             id="about"
             className={`${
               aboutEntered
-                ? `${sectionAnimatedClass} animate__backInDown`
+                ? `${sectionAnimatedClass} animate__backInLeft`
+                : !aboutEntered
+                ? `${sectionAnimatedClass} animate__backOutLeft`
                 : "is-hidden"
             }`}
             content={about}
@@ -66,12 +72,18 @@ const App = () => {
           <Waypoint onEnter={() => setAboutEntered(true)} />
           <div className="o-spacer" />
 
-          <Waypoint onEnter={() => setSkillsEntered(true)} />
+          {/* Skills */}
+          <Waypoint
+            onEnter={() => setSkillsEntered(true)}
+            onLeave={() => setSkillsEntered(false)}
+          />
           <Skills
             id="skills"
             className={`${
               skillsEntered
-                ? `${sectionAnimatedClass} animate__backInDown`
+                ? `${sectionAnimatedClass} animate__backInLeft`
+                : !skillsEntered
+                ? `${sectionAnimatedClass} animate__backOutLeft`
                 : "is-hidden"
             }`}
             content={skills}
@@ -79,12 +91,13 @@ const App = () => {
           <Waypoint onEnter={() => setSkillsEntered(true)} />
           <div className="o-spacer" />
 
+          {/* Showcase */}
           <Waypoint onEnter={() => setShowcaseEntered(true)} />
           <Showcase
             id="showcase"
             className={`${
               showcaseEntered
-                ? `${sectionAnimatedClass} animate__backInDown`
+                ? `${sectionAnimatedClass} animate__fadeInLeftBig`
                 : "is-hidden"
             }`}
             content={showcase}
