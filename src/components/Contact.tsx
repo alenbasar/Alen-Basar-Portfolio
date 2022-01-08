@@ -66,70 +66,78 @@ const Contact = (props: Props) => {
   }
 
   return (
-    <section className={`c-contact ${className}`} {...restProps}>
-      <div className="c-contact__heading">
-        <h2>{heading}</h2>
-      </div>
-      <div className="c-contact__content">
-        <div className="c-contact__content__intro">
-          {description.map((dsc) => (
-            <p key={dsc} className="c-contact__content__intro__description">
-              {dsc}
-            </p>
-          ))}
-          <form action={ctaLink}>
-            <input
-              type="submit"
-              value={cta}
-              className="c-contact__content__intro__cta"
-            />
-          </form>
-          {/* <Link to={ctaLink} className="c-contact__intro__cta">
+    <section className={`c-contact ${className}`}>
+      <div className={"c-contact__card"} {...restProps}>
+        <div className="c-contact__card__heading">
+          <h2>{heading}</h2>
+        </div>
+        <div className="c-contact__card__content">
+          <div className="c-contact__card__content__intro">
+            {description.map((dsc) => (
+              <p
+                key={dsc}
+                className="c-contact__card__content__intro__description"
+              >
+                {dsc}
+              </p>
+            ))}
+            <form action={ctaLink}>
+              <input
+                type="submit"
+                value={cta}
+                className="c-contact__card__content__intro__cta"
+              />
+            </form>
+            {/* <Link to={ctaLink} className="c-contact__intro__cta">
           {cta}
         </Link> */}
+          </div>
+          <div className="c-contact__card__content__divider" />
+          <form
+            onSubmit={(e) => submitHandler(e)}
+            className="c-contact__card__content__form"
+          >
+            <p></p>
+            <p></p>
+            <input
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder={form.firstNamePlaceholder}
+              required
+            />
+            <input
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              placeholder={form.lastNamePlaceholder}
+              required
+            />
+            <input
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              placeholder={form.companyPlaceholder}
+            />
+            <input
+              value={email}
+              type="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={form.emailPlaceholder}
+              required
+            />
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder={form.messagePlaceholder}
+              rows={5}
+              required
+            />
+            <button
+              className="c-contact__card__content__form-cta"
+              type="submit"
+            >
+              {form.cta}
+            </button>
+          </form>
         </div>
-        <div className="c-contact__content__divider" />
-        <form
-          onSubmit={(e) => submitHandler(e)}
-          className="c-contact__content__form"
-        >
-          <p></p>
-          <p></p>
-          <input
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder={form.firstNamePlaceholder}
-            required
-          />
-          <input
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            placeholder={form.lastNamePlaceholder}
-            required
-          />
-          <input
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            placeholder={form.companyPlaceholder}
-          />
-          <input
-            value={email}
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={form.emailPlaceholder}
-            required
-          />
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder={form.messagePlaceholder}
-            rows={5}
-            required
-          />
-          <button className="c-contact__content__form-cta" type="submit">
-            {form.cta}
-          </button>
-        </form>
       </div>
     </section>
   );

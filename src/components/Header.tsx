@@ -2,7 +2,10 @@ import React, { useState, useEffect, HTMLAttributes } from "react";
 import Dompurify from "dompurify";
 import { MenuItem, desktopMenu } from "../../src/constants/menu";
 import { Link } from "react-scroll";
-import { ScrollSettings } from "../constants/scrollSettings";
+import {
+  ScrollSettings,
+  ContactScrollSettings,
+} from "../constants/scrollSettings";
 import Typewriter from "typewriter-effect";
 
 type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
@@ -19,16 +22,29 @@ const Header = (props: Props) => {
   });
 
   const renderLink = (menuItem: MenuItem) => {
-    if (menuItem.to)
-      return (
-        <Link
-          className="c-header__menu-item"
-          to={menuItem.to}
-          {...ScrollSettings}
-        >
-          {menuItem.icon ? Dompurify.sanitize(menuItem.icon) : menuItem.label}
-        </Link>
-      );
+    if (menuItem.to) {
+      if (menuItem.to === "contact") {
+        return (
+          <Link
+            className="c-header__menu-item"
+            to={menuItem.to}
+            {...ContactScrollSettings}
+          >
+            {menuItem.icon ? Dompurify.sanitize(menuItem.icon) : menuItem.label}
+          </Link>
+        );
+      } else {
+        return (
+          <Link
+            className="c-header__menu-item"
+            to={menuItem.to}
+            {...ScrollSettings}
+          >
+            {menuItem.icon ? Dompurify.sanitize(menuItem.icon) : menuItem.label}
+          </Link>
+        );
+      }
+    }
 
     return (
       <a

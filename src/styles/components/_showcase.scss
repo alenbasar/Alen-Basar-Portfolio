@@ -2,10 +2,17 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  // height: 100vh;
+  // border: 1px solid black;
+  border-radius: 1rem;
+  background-color: transparentize(rgb(32, 32, 32), 0.05);
+  box-shadow: 0px 22px 13px -16px rgba(0, 0, 0, 0.842);
+  // background-color: rgba(167, 167, 167, 0.87);
+  // align-items: center;
   margin: auto;
   max-width: 118.75rem;
+  color: white;
   .react-images {
     border-radius: 1rem;
   }
@@ -13,22 +20,23 @@
     text-align: center;
     margin: auto;
     margin-bottom: 1.5rem;
-    width: 80%;
+    // width: 80%;
   }
 
   &__grid {
     display: flex;
     flex-wrap: wrap;
-
+    margin: auto;
+    width: 80%;
     &__card {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
       border-radius: 1rem;
-      width: 100%;
+      // width: 100%;
       font-family: $font-primary;
 
-      border-top: none;
+      // border-top: none;
       &-image {
         width: 100%;
         height: 100%;
@@ -57,7 +65,7 @@
         line-height: 1rem;
         &-title {
           margin: 0;
-          color: black;
+          // color: black;
           overflow: hidden;
           align-self: center;
           text-align: center;
@@ -77,17 +85,17 @@
         user-select: none;
 
         justify-content: center;
-        width: 100%;
+        // width: 100%;
 
-        overflow: hidden;
+        // overflow: hidden;
         margin-top: 0.2rem;
 
         span {
           display: inline-block;
           padding: 0.5rem 0.5rem;
 
-          color: transparentize($color-font-primary, 0.19);
-          border: 1px solid $color-accent;
+          // color: transparentize($color-font-primary, 0.19);
+          border: 1px solid white;
           border-radius: 0.15rem;
           margin: 0.3rem;
         }
@@ -108,7 +116,7 @@
                 transform: scale(1.2);
               }
               path {
-                fill: black;
+                fill: white;
               }
               &:before {
                 content: none;

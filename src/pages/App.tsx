@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import TextOutro from "../components/TextOutro";
 import Loader from "../components/Loader";
+import BackgroundParticles from "../components/BackgroundParticles";
 
 const { banner, about, skills, showcase, contact, textOutro, footer } =
   data.homepage;
@@ -21,6 +22,8 @@ const App = () => {
   const [skillsEntered, setSkillsEntered] = useState(false);
   const [showcaseEntered, setShowcaseEntered] = useState(false);
   const [contactEntered, setContactEntered] = useState(false);
+  const [textOutroEntered, setTextOutroEntered] = useState(false);
+  const [footerEntered, setFooterEntered] = useState(false);
 
   const sectionAnimatedClass = "animate__animated is-section-animated";
 
@@ -35,96 +38,123 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
-        <React.Fragment>
-          <Header logo={data.logo} />
-          <div className="o-nav-spacer" />
+        <>
+          <BackgroundParticles />
+          <React.Fragment>
+            <Header logo={data.logo} />
 
-          <Waypoint onEnter={() => setBannerEntered(true)} />
-          <Banner
-            id="home"
-            className={`${
-              bannerEntered
-                ? `${sectionAnimatedClass} animate__fadeIn`
-                : "is-hidden"
-            }`}
-            pageTitle
-            content={banner}
-          />
-          <Waypoint onEnter={() => setBannerEntered(true)} />
-          <div className="o-spacer" />
+            {/* <div className="o-nav-spacer" /> */}
 
-          {/* About  */}
-          <Waypoint
-            onEnter={() => setAboutEntered(true)}
-            onLeave={() => setAboutEntered(false)}
-          />
-          <About
-            id="about"
-            className={`${
-              aboutEntered
-                ? `${sectionAnimatedClass} animate__backInLeft`
-                : !aboutEntered
-                ? `${sectionAnimatedClass} animate__backOutLeft`
-                : "is-hidden"
-            }`}
-            content={about}
-          />
-          <Waypoint onEnter={() => setAboutEntered(true)} />
-          <div className="o-spacer" />
+            <Waypoint onEnter={() => setBannerEntered(true)} />
+            <Banner
+              id="home"
+              className={`${
+                bannerEntered
+                  ? `${sectionAnimatedClass} animate__fadeIn`
+                  : "is-hidden"
+              }`}
+              pageTitle
+              content={banner}
+            />
+            <Waypoint onEnter={() => setBannerEntered(true)} />
+            <div className="o-spacer" />
 
-          {/* Skills */}
-          <Waypoint
-            onEnter={() => setSkillsEntered(true)}
-            onLeave={() => setSkillsEntered(false)}
-          />
-          <Skills
-            id="skills"
-            className={`${
-              skillsEntered
-                ? `${sectionAnimatedClass} animate__backInLeft`
-                : !skillsEntered
-                ? `${sectionAnimatedClass} animate__backOutLeft`
-                : "is-hidden"
-            }`}
-            content={skills}
-          />
-          <Waypoint onEnter={() => setSkillsEntered(true)} />
-          <div className="o-spacer" />
+            {/* About  */}
+            <Waypoint
+              onEnter={() => setAboutEntered(true)}
+              onLeave={() => setAboutEntered(false)}
+            />
+            <About
+              id="about"
+              className={`${
+                aboutEntered
+                  ? `${sectionAnimatedClass} animate__backInLeft`
+                  : !aboutEntered
+                  ? `${sectionAnimatedClass} animate__backOutLeft`
+                  : "is-hidden"
+              }`}
+              content={about}
+            />
+            <Waypoint onEnter={() => setAboutEntered(true)} />
+            <div className="o-spacer" />
 
-          {/* Showcase */}
-          <Waypoint onEnter={() => setShowcaseEntered(true)} />
-          <Showcase
-            id="showcase"
-            className={`${
-              showcaseEntered
-                ? `${sectionAnimatedClass} animate__fadeInLeftBig`
-                : "is-hidden"
-            }`}
-            content={showcase}
-          />
-          <Waypoint onEnter={() => setShowcaseEntered(true)} />
-          <div className="o-spacer" />
-          {/* <div className="o-spacer" /> */}
+            {/* Skills */}
+            <Waypoint
+              onEnter={() => setSkillsEntered(true)}
+              onLeave={() => setSkillsEntered(false)}
+            />
+            <Skills
+              id="skills"
+              className={`${
+                skillsEntered
+                  ? `${sectionAnimatedClass} animate__backInRight`
+                  : !skillsEntered
+                  ? `${sectionAnimatedClass} animate__backOutLeft`
+                  : "is-hidden"
+              }`}
+              content={skills}
+            />
+            <Waypoint onEnter={() => setSkillsEntered(true)} />
+            <div className="o-spacer" />
 
-          <Waypoint onEnter={() => setContactEntered(true)} />
-          <Contact
-            className={`${
-              contactEntered
-                ? `${sectionAnimatedClass} animate__backInDown`
-                : "is-hidden"
-            }`}
-            content={contact}
-            id="contact"
-          />
-          <Waypoint onEnter={() => setContactEntered(true)} />
-          <div className="o-spacer" />
+            {/* Showcase */}
+            <Waypoint onEnter={() => setShowcaseEntered(true)} />
+            <Showcase
+              id="showcase"
+              className={`${
+                showcaseEntered
+                  ? `${sectionAnimatedClass} animate__backInUp`
+                  : "is-hidden"
+              }`}
+              content={showcase}
+            />
+            <Waypoint onEnter={() => setShowcaseEntered(true)} />
+            <div className="o-spacer" />
 
-          <TextOutro content={textOutro} id="textOutro" />
-          <div className="o-spacer" />
-          <div className="o-spacer" />
+            <Waypoint onEnter={() => setContactEntered(true)} />
+            <Contact
+              id="contact"
+              className={`${
+                contactEntered
+                  ? `${sectionAnimatedClass} animate__fadeInLeftBig`
+                  : !contactEntered
+                  ? `${sectionAnimatedClass} animate__backOutDown`
+                  : "is-hidden"
+              }`}
+              content={contact}
+            />
+            <Waypoint
+              onEnter={() => setContactEntered(true)}
+              onLeave={() => setContactEntered(false)}
+            />
+            <div className="o-spacer" />
 
-          <Footer content={footer} />
-        </React.Fragment>
+            <Waypoint onEnter={() => setTextOutroEntered(true)} />
+            <TextOutro
+              className={`${
+                textOutroEntered
+                  ? `${sectionAnimatedClass} animate__bounceInDown`
+                  : !textOutroEntered
+                  ? `${sectionAnimatedClass} animate__backOutDown`
+                  : "is-hidden"
+              }`}
+              content={textOutro}
+            />
+            <div className="o-spacer" />
+
+            <Waypoint onEnter={() => setFooterEntered(true)} />
+            <Footer
+              className={`${
+                footerEntered
+                  ? `${sectionAnimatedClass} animate__fadeInLeft`
+                  : !footerEntered
+                  ? `${sectionAnimatedClass} animate__backOutDown`
+                  : "is-hidden"
+              }`}
+              content={footer}
+            />
+          </React.Fragment>
+        </>
       )}
     </div>
   );

@@ -3,5 +3,12 @@ export const ScrollSettings = {
   spy: true,
   smooth: true,
   duration: 500,
-  offset: -130,
+  offset: -120,
+};
+export const ContactScrollSettings = {
+  activeClass: "is-active",
+  spy: true,
+  smooth: true,
+  duration: 500,
+  offset: -270,
 };

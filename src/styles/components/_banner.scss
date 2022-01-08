@@ -1,23 +1,16 @@
 .c-banner {
-  height: 100%;
-  // position: fixed;
-  // top: 6rem;
   // display: flex;
-  // align-items: flex-start;
+  position: relative;
+  // width: 5rem;
+  height: 60rem;
   justify-content: center;
   margin: auto;
-  // margin-top: 6rem;
-  // overflow: hidden;
-  position: relative;
+  text-align: center;
+  // position: absolute;
   max-width: 118.75rem;
-  // border-radius: 0 0 3rem 3rem;
+  // background-color: black;
   font-family: $font-primary;
-  &__particles {
-    max-width: 118.75rem;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  // z-index: -1000;
   &__content {
     width: 100%;
     position: absolute;

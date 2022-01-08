@@ -1,0 +1,16 @@
+.c-background {
+  display: flex;
+  //   align-items: center;
+  justify-content: center;
+  //   margin-bottom: 55rem;
+  //   height: 60%;
+  z-index: -1000;
+  &__particles {
+    position: fixed;
+    // max-width: 118.75rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // z-index: -1;
+  }
+}

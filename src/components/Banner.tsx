@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import { Link } from "react-scroll";
 import { ScrollSettings } from "../constants/scrollSettings";
-import Particles from "react-particles-js";
+// import Particles from "react-particles-js";
 
 export type BannerContent = {
   heading: string;
@@ -39,7 +39,7 @@ const Banner = (props: Props) => {
           {cta}
         </Link>
       </div>
-      <Particles
+      {/* <Particles
         className="c-banner__particles"
         params={{
           particles: {
@@ -99,7 +99,7 @@ const Banner = (props: Props) => {
             },
           },
         }}
-      />
+      /> */}
     </section>
   );
 };
