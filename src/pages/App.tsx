@@ -60,10 +60,7 @@ const App = () => {
             <div className="o-spacer" />
 
             {/* About  */}
-            <Waypoint
-              onEnter={() => setAboutEntered(true)}
-              onLeave={() => setAboutEntered(false)}
-            />
+            <Waypoint onEnter={() => setAboutEntered(true)} />
             <About
               id="about"
               className={`${
@@ -79,17 +76,12 @@ const App = () => {
             <div className="o-spacer" />
 
             {/* Skills */}
-            <Waypoint
-              onEnter={() => setSkillsEntered(true)}
-              onLeave={() => setSkillsEntered(false)}
-            />
+            <Waypoint onEnter={() => setSkillsEntered(true)} />
             <Skills
               id="skills"
               className={`${
                 skillsEntered
                   ? `${sectionAnimatedClass} animate__backInRight`
-                  : !skillsEntered
-                  ? `${sectionAnimatedClass} animate__backOutLeft`
                   : "is-hidden"
               }`}
               content={skills}
@@ -123,10 +115,7 @@ const App = () => {
               }`}
               content={contact}
             />
-            <Waypoint
-              onEnter={() => setContactEntered(true)}
-              onLeave={() => setContactEntered(false)}
-            />
+            <Waypoint onEnter={() => setContactEntered(true)} />
             <div className="o-spacer" />
 
             <Waypoint onEnter={() => setTextOutroEntered(true)} />
