@@ -20,8 +20,12 @@
 @import "./components/textOutro";
 
 .o-spacer {
-  height: 8rem;
+  height: 9rem;
 }
-.o-nav-spacer {
-  height: 6rem;
+// .o-nav-spacer {
+//   height: 6rem;
+// }
+.is-section-animated {
+  animation-delay: 0s;
+  animation-duration: 0.8s;
 }

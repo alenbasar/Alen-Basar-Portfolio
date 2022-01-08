@@ -8,8 +8,9 @@
   padding: 6rem;
   border: 1px solid $color-accent;
   border-radius: 1rem;
+  color: $color-font-primary;
   background-color: transparentize($color-background, 0.2);
-  box-shadow: 0px 22px 13px -16px rgba(0, 0, 0, 0.842);
+  box-shadow: 0px 18px 13px -16px rgba(0, 0, 0, 0.842);
   // border-top: 1px solid $color-accent;
   // border-bottom: 1px solid $color-accent;
 

@@ -43,7 +43,7 @@ const App = () => {
           <React.Fragment>
             <Header logo={data.logo} />
 
-            {/* <div className="o-nav-spacer" /> */}
+            <div className="o-nav-spacer" />
 
             <Waypoint onEnter={() => setBannerEntered(true)} />
             <Banner
@@ -65,9 +65,7 @@ const App = () => {
               id="about"
               className={`${
                 aboutEntered
-                  ? `${sectionAnimatedClass} animate__backInLeft`
-                  : !aboutEntered
-                  ? `${sectionAnimatedClass} animate__backOutLeft`
+                  ? `${sectionAnimatedClass} animate__fadeInLeftBig`
                   : "is-hidden"
               }`}
               content={about}
@@ -81,7 +79,7 @@ const App = () => {
               id="skills"
               className={`${
                 skillsEntered
-                  ? `${sectionAnimatedClass} animate__backInRight`
+                  ? `${sectionAnimatedClass} animate__zoomInUp`
                   : "is-hidden"
               }`}
               content={skills}
@@ -95,7 +93,7 @@ const App = () => {
               id="showcase"
               className={`${
                 showcaseEntered
-                  ? `${sectionAnimatedClass} animate__backInUp`
+                  ? `${sectionAnimatedClass} animate__fadeInRightBig`
                   : "is-hidden"
               }`}
               content={showcase}
@@ -109,22 +107,18 @@ const App = () => {
               className={`${
                 contactEntered
                   ? `${sectionAnimatedClass} animate__fadeInLeftBig`
-                  : !contactEntered
-                  ? `${sectionAnimatedClass} animate__backOutDown`
                   : "is-hidden"
               }`}
               content={contact}
             />
             <Waypoint onEnter={() => setContactEntered(true)} />
-            {/* <div className="o-spacer" /> */}
+            <div className="o-spacer" />
 
             <Waypoint onEnter={() => setTextOutroEntered(true)} />
             <TextOutro
               className={`${
                 textOutroEntered
                   ? `${sectionAnimatedClass} animate__bounceInDown`
-                  : !textOutroEntered
-                  ? `${sectionAnimatedClass} animate__backOutDown`
                   : "is-hidden"
               }`}
               content={textOutro}
@@ -135,9 +129,7 @@ const App = () => {
             <Footer
               className={`${
                 footerEntered
-                  ? `${sectionAnimatedClass} animate__fadeInLeft`
-                  : !footerEntered
-                  ? `${sectionAnimatedClass} animate__backOutDown`
+                  ? `${sectionAnimatedClass} animate__bounceInRight`
                   : "is-hidden"
               }`}
               content={footer}

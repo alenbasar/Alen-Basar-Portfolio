@@ -4,9 +4,9 @@
   flex-direction: column;
   // align-items: center;
   // justify-content: center;
-  margin: auto;
+  margin: 5rem auto;
   // width: 60%;
-  height: 90vh;
+  height: 40rem;
 
   // border-top: 1px solid $color-accent;
   // border-bottom: 1px solid $color-accent;
@@ -15,7 +15,8 @@
   &__card {
     // background-color: transparentize($color-background, 0.3);
     // height: 1rem;
-    width: 60%;
+    padding: 5rem;
+    width: 80%;
     border: 1px solid $color-accent;
     margin: auto;
     border-radius: 1rem;
@@ -55,9 +56,9 @@
         //   align-items: center;
         justify-content: center;
         //   flex-basis: auto;
-        text-align: left;
+        // text-align: center;
         line-height: 1.5rem;
-        width: 40%;
+        width: 30%;
 
         align-items: flex-start;
         &__heading {
@@ -85,7 +86,7 @@
 
       &__divider {
         width: 0.5px;
-        height: 20rem;
+        // height: 20rem;
         margin: 2rem;
         // margin-top: 5rem;
         // margin-bottom: 5rem;
@@ -97,7 +98,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 40%;
+        width: 30%;
+        padding: 1rem;
 
         &__heading {
           text-align: center;
@@ -106,7 +108,7 @@
 
         input {
           border: 1px solid $color-accent;
-          border-radius: 1rem;
+          border-radius: 0.5rem;
         }
 
         textarea {
