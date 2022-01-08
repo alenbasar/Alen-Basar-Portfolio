@@ -116,7 +116,7 @@ const App = () => {
               content={contact}
             />
             <Waypoint onEnter={() => setContactEntered(true)} />
-            <div className="o-spacer" />
+            {/* <div className="o-spacer" /> */}
 
             <Waypoint onEnter={() => setTextOutroEntered(true)} />
             <TextOutro

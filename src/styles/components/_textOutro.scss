@@ -1,9 +1,22 @@
 .c-outro {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
+  background-color: transparentize(black, 0.05);
+  border-radius: 1rem;
+  width: 60%;
+  color: white;
+  height: 60vh;
   &__cta {
-    color: black;
+    color: white;
+    border: 1px solid white;
     overflow: hidden;
+    cursor: pointer;
     font-size: 1rem;
+    &:hover {
+      box-shadow: 0px 10px 13px -16px rgba(255, 255, 255, 0.75);
+    }
   }
 }
