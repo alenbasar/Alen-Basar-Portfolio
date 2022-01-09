@@ -1,12 +1,15 @@
 .c-skills {
-  width: 80%;
+  // width: 80%;
   max-width: 118.75rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 2rem auto;
-  padding: 6rem;
+  margin: auto;
+  // justify-content: center;
+  // margin: 2rem auto;
+  // padding: 6rem;
   border: 1px solid $color-accent;
+  border-left: none;
+  border-right: none;
   border-radius: 1rem;
   color: $color-font-primary;
   background-color: transparentize($color-background, 0.2);
@@ -22,16 +25,28 @@
   }
   &__grid {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     // width: 100px;
+
     &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem auto;
+      margin-top: 0;
+      // width: 50%;
+      // padding: 3rem;
       text-align: center;
+      // border: 1px solid black;
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
+
       &-icon {
-        width: 25rem;
-        height: 20rem;
+        width: 18rem;
+        // height: 20rem;
 
         & svg path {
           fill: transparentize($color-primary, 0);
@@ -59,5 +74,33 @@
         }
       }
     }
+  }
+
+  @include media(medium) {
+    &__grid {
+      flex-direction: row;
+      &__card {
+        margin: 1rem 5rem 5rem;
+      }
+    }
+  }
+
+  @include media(large) {
+    width: 80%;
+    border-left: 1px solid $color-accent;
+    border-right: 1px solid $color-accent;
+    // &__grid {
+    //   &__card {
+    //     margin: 1rem 5rem 5rem;
+    //   }
+    // }
+  }
+
+  @include media(xlarge) {
+    // &__grid {
+    //   &__card {
+    //     margin: 1rem 5rem 5rem;
+    //   }
+    // }
   }
 }

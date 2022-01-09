@@ -1,20 +1,27 @@
 @mixin media($screen) {
   @if $screen == xsmall {
-    @media (min-width: 500px) { @content; }
-  }
-  @else if $screen == small {
-    @media (min-width: 750px) { @content; }
-  }
-  @else if $screen == medium {
-    @media (min-width: 1000px) { @content; }
-  }
-  @else if $screen == large {
-    @media (min-width: 1300px) { @content; }
-  }
-  @else if $screen == xlarge {
-    @media (min-width: 1500px) { @content; }
-  }
-  @else {
-    @media (min-width: $screen) { @content; }
+    @media (min-width: 500px) {
+      @content;
+    }
+  } @else if $screen == small {
+    @media (min-width: 750px) {
+      @content;
+    }
+  } @else if $screen == medium {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  } @else if $screen == large {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  } @else if $screen == xlarge {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $screen) {
+      @content;
+    }
   }
 }

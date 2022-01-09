@@ -1,12 +1,12 @@
 .c-contact {
   display: flex;
   max-width: 118.75rem;
-  flex-direction: column;
+  // flex-direction: column;
   // align-items: center;
   // justify-content: center;
-  margin: 5rem auto;
-  // width: 60%;
-  height: 40rem;
+  margin: auto;
+  width: 100%;
+  // height: 100vh;
 
   // border-top: 1px solid $color-accent;
   // border-bottom: 1px solid $color-accent;
@@ -15,22 +15,23 @@
   &__card {
     // background-color: transparentize($color-background, 0.3);
     // height: 1rem;
-    padding: 5rem;
-    width: 80%;
+    // padding: 5rem;
+    width: 100%;
     border: 1px solid $color-accent;
     margin: auto;
     border-radius: 1rem;
     background-color: transparentize($color-background, 0.15);
     font-family: $font-primary;
     box-shadow: 0px 20px 23px -16px rgba(0, 0, 0, 0.75);
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.8fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "Heading"
-      "Content";
+    display: flex;
+    flex-direction: column;
+    // grid-auto-columns: 1fr;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: 0.2fr 1.8fr;
+    // gap: 0px 0px;
+    // grid-template-areas:
+    //   "Heading"
+    //   "Content";
 
     &__heading {
       margin: 1rem auto;
@@ -51,7 +52,7 @@
       // height: 30rem;
 
       &__intro {
-        display: flex;
+        display: none;
         flex-direction: column;
         //   align-items: center;
         justify-content: center;
@@ -85,6 +86,7 @@
       }
 
       &__divider {
+        display: none;
         width: 0.5px;
         // height: 20rem;
         margin: 2rem;
@@ -98,8 +100,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 30%;
-        padding: 1rem;
+        width: 90%;
+        padding: 3rem;
 
         &__heading {
           text-align: center;
@@ -131,6 +133,44 @@
           color: black;
         }
       }
+    }
+  }
+
+  @include media(xsmall) {
+  }
+
+  @include media(medium) {
+    &__card {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 1.8fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "Heading"
+        "Content";
+
+      &__content {
+        &__intro {
+          display: flex;
+          width: 40%;
+        }
+
+        &__divider {
+          display: flex;
+        }
+
+        &__form {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  @include media(large) {
+    height: 100vh;
+    &__card {
+      width: 60%;
     }
   }
 }

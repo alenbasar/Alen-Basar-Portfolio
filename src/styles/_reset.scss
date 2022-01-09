@@ -173,19 +173,19 @@ textarea {
   display: none;
 }
 
-.is-desktop-only {
-  display: none;
-  @include media(medium) {
-    display: flex;
-  }
-}
+// .is-desktop-only {
+//   display: none;
+//   @include media(medium) {
+//     display: flex;
+//   }
+// }
 
-.is-mobile-only {
-  display: flex;
-  @include media(medium) {
-    display: none;
-  }
-}
+// .is-mobile-only {
+//   display: flex;
+//   @include media(medium) {
+//     display: none;
+//   }
+// }
 
 // .is-section-animated {
 //   animation-delay: 0s;

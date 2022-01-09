@@ -1,0 +1,11 @@
+.page-app {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: $color-background;
+
+  &.is-loaded {
+    background: none;
+    max-width: $max-screen-width;
+  }
+}
