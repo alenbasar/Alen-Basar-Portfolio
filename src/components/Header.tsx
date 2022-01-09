@@ -12,6 +12,7 @@ type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
 const Header = (props: Props) => {
   const { className = "", logo, ...restProps } = props;
   const [floating, setFloating] = useState(false);
+  // const [drawerActive, setDrawerActive] = useState(false);
 
   const scrollHandler = () => {
     setFloating(window.scrollY >= 20);
@@ -57,6 +58,22 @@ const Header = (props: Props) => {
       </a>
     );
   };
+
+  // const renderHamburger = () => {
+  //   return (
+  //     <li className="c-header__side-drawer-trigger">
+  //       <button
+  //         className={`hamburger hamburger--spin${
+  //           drawerActive ? " is-active" : ""
+  //         }`}
+  //       >
+  //         <span className="hamburger-box">
+  //           <span className="hamburger-inner"></span>
+  //         </span>
+  //       </button>
+  //     </li>
+  //   );
+  // };
 
   return (
     <React.Fragment>
