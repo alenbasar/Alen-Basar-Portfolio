@@ -1,6 +1,11 @@
 import React, { useState, useEffect, HTMLAttributes } from "react";
 import Dompurify from "dompurify";
-import { MenuItem, desktopMenu } from "../../src/constants/menu";
+import {
+  MenuItem,
+  desktopMenu,
+  mobileMenu,
+  mobileMenuPrimary,
+} from "../../src/constants/menu";
 import { Link } from "react-scroll";
 import {
   ScrollSettings,
@@ -12,7 +17,7 @@ type Props = { logo: string } & HTMLAttributes<HTMLDivElement>;
 const Header = (props: Props) => {
   const { className = "", logo, ...restProps } = props;
   const [floating, setFloating] = useState(false);
-  // const [drawerActive, setDrawerActive] = useState(false);
+  const [drawerActive, setDrawerActive] = useState(false);
 
   const scrollHandler = () => {
     setFloating(window.scrollY >= 20);
@@ -59,21 +64,22 @@ const Header = (props: Props) => {
     );
   };
 
-  // const renderHamburger = () => {
-  //   return (
-  //     <li className="c-header__side-drawer-trigger">
-  //       <button
-  //         className={`hamburger hamburger--spin${
-  //           drawerActive ? " is-active" : ""
-  //         }`}
-  //       >
-  //         <span className="hamburger-box">
-  //           <span className="hamburger-inner"></span>
-  //         </span>
-  //       </button>
-  //     </li>
-  //   );
-  // };
+  const renderHamburger = () => {
+    return (
+      <li className="c-header__side-drawer-trigger">
+        <button
+          className={`hamburger hamburger--spring${
+            drawerActive ? " is-active" : ""
+          }`}
+          onClick={() => setDrawerActive(!drawerActive)}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+      </li>
+    );
+  };
 
   return (
     <React.Fragment>
@@ -81,6 +87,35 @@ const Header = (props: Props) => {
         className={`c-header${floating ? " is-floating" : ""}${className}`}
         {...restProps}
       >
+        {/* Mobile menu */}
+        <ul className="is-mobile-only">
+          <Link
+            to="main-banner"
+            className="c-header__logo"
+            dangerouslySetInnerHTML={{ __html: Dompurify.sanitize(logo) }}
+          />
+          {mobileMenuPrimary.map((m) => (
+            <React.Fragment key={m.key}>{renderLink(m)}</React.Fragment>
+          ))}
+        </ul>
+        <div
+          className={`c-header__side-drawer is-mobile-only${
+            drawerActive ? " is-active" : ""
+          }`}
+        >
+          {mobileMenu.map((m) => (
+            <React.Fragment key={m.key}>{renderLink(m)}</React.Fragment>
+          ))}
+        </div>
+        <div
+          className={`c-header__backdrop is-mobile-only${
+            drawerActive ? " is-active" : ""
+          }`}
+          onClick={() => setDrawerActive(false)}
+        />
+        <ul className="is-mobile-only">{renderHamburger()}</ul>
+
+        {/* Desktop Menu */}
         <ul className="is-desktop-only">
           <div className="c-header-logo">
             <Typewriter

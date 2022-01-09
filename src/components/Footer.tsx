@@ -13,8 +13,8 @@ const Footer = (props: Props) => {
   return (
     <section className={`c-footer ${className}`}>
       <footer className="c-footer__footer">
-        <p>{content.copyright}</p>
-        <div>
+        <p className="c-footer__footer__copyright">{content.copyright}</p>
+        <div className="c-footer__footer__links">
           {footerMenu.map((i) => (
             <a
               key={i.key}

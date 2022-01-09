@@ -21,13 +21,13 @@ export type MenuItem = {
       }
   );
 
-export const hamburgerIcon: MenuItem[] = [];
+export const mobileMenuPrimary: MenuItem[] = [];
 export const mobileMenu: MenuItem[] = [
-  { key: "m-home", to: "home", label: "HOME" },
-  { key: "m-about", to: "about", label: "ABOUT ME" },
-  { key: "m-projects", to: "showcase", label: "MY_PROJECTS" },
-  { key: "m-contact", to: "contact", label: "CONTACT" },
-  { key: "m-resume", link: "", label: "RESUME" },
+  { key: "m-home", to: "home", label: "Home" },
+  { key: "m-about", to: "about", label: "About Me" },
+  { key: "m-projects", to: "showcase", label: "Projects" },
+  { key: "m-contact", to: "contact", label: "Contact" },
+  { key: "m-resume", link: "", label: "Resume" },
 ];
 
 export const navLogo: MenuItem[] = [];

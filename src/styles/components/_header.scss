@@ -2,10 +2,12 @@
   position: fixed;
   top: 0;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  // flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
-  padding: 2em 10em;
+  // padding: 2em 10em;
   max-width: 118.75rem;
   background-color: (transparentize($color-background, 0));
   left: 0;
@@ -35,6 +37,7 @@
     transition: all 0.1s ease-in;
   }
   .is-desktop-only {
+    display: none;
     .c-header-logo span {
       bottom: 0;
       color: transparentize($color-font-primary, 0.19);
@@ -49,7 +52,85 @@
       // background-color: black;
     }
   }
+  &__side-drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: $color-background;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 5;
+    padding: #{$gutter + 1.5};
+
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    a {
+      text-align: center;
+      margin: 0;
+      // width: 100%;
+      // &:before {
+      //   width: 3rem;
+      //   left: 0;
+      // }
+    }
+
+    &.is-active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &-trigger {
+      z-index: 6;
+    }
+
+    a {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+  &__backdrop {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    backdrop-filter: blur(0.2rem);
+    background-color: transparentize(black, 0.5);
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease;
+    z-index: 4;
+
+    &.is-active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @include media(xsmall) {
+    height: 3rem;
+    &__side-drawer {
+      max-width: 50%;
+      padding: #{$gutter + 3};
+    }
+  }
 
   @include media(large) {
+    justify-content: space-between;
+    padding: 2em 10em;
+    height: 6rem;
+    .is-desktop-only {
+      display: block;
+    }
+    .is-mobile-only {
+      display: none;
+    }
   }
 }
