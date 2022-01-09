@@ -4,7 +4,7 @@
   // width: 5rem;
   // height: 55rem;
   // justify-content: center;
-  margin: 20rem auto;
+  margin: 15rem auto;
   text-align: center;
   // position: absolute;
   max-width: 118.75rem;
@@ -30,12 +30,12 @@
       // max-width: 100%;
       width: 100%;
       text-align: center;
-      font-size: 2.5em;
+      font-size: 2em;
     }
 
     &-text {
       color: transparentize($color-font-primary, 0.05);
-      font-size: 1.5em;
+      font-size: 1.2em;
       text-align: center;
     }
 

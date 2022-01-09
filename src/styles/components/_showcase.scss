@@ -33,7 +33,7 @@
       flex-direction: column;
       margin-bottom: 3rem;
       border-radius: 1rem;
-      // width: 100%;
+      width: 100%;
       font-family: $font-primary;
 
       // border-top: none;
@@ -92,13 +92,13 @@
         margin-top: 0.2rem;
 
         span {
-          display: inline-block;
+          // display: inline-block;
           padding: 0.5rem 0.5rem;
 
           // color: transparentize($color-font-primary, 0.19);
           border: 1px solid white;
           border-radius: 0.15rem;
-          margin: 0.3rem;
+          margin: 0.1rem;
         }
       }
 
