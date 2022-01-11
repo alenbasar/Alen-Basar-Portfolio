@@ -89,11 +89,23 @@ const Header = (props: Props) => {
       >
         {/* Mobile menu */}
         <ul className="is-mobile-only">
-          <Link
-            to="main-banner"
-            className="c-header__logo"
-            dangerouslySetInnerHTML={{ __html: Dompurify.sanitize(logo) }}
-          />
+          <div className="c-header-logo">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true,
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Alen_Basar")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("Software_Developer")
+                  .pauseFor(2000)
+                  .start();
+              }}
+            />
+          </div>
           {mobileMenuPrimary.map((m) => (
             <React.Fragment key={m.key}>{renderLink(m)}</React.Fragment>
           ))}
