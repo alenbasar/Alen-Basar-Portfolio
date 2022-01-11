@@ -23,12 +23,17 @@ const TextOutro = (props: Props) => {
             {txt}
             </h4>
         ))} */}
-      <form action={ctaLink}>
+      {/* <form action={ctaLink}>
         <input type="submit" value={cta} className="c-outro__cta" />
-      </form>
-      {/* <a href={ctaLink} className="c-outro__cta">
+      </form> */}
+      <a
+        href={ctaLink}
+        className="c-outro__cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {cta}
-      </a> */}
+      </a>
     </section>
   );
 };

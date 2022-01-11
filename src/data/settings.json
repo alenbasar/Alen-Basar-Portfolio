@@ -22,7 +22,7 @@
         "The journey through the world of web development started with learing fundamental front-end technologies (HTML, CSS and JavaScript), probably like every other web developer. After getting solid knowledge of fundamental languages I chose to learn React.js, PHP, SQL and more."
       ],
       "cta": "Check out my resume",
-      "ctaLink": ""
+      "ctaLink": "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Resume.pdf"
     },
     "skills": {
       "heading": "Technologies I have experience with",
@@ -140,7 +140,7 @@
         "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
       ],
       "cta": "Check out my resume",
-      "ctaLink": ""
+      "ctaLink": "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Resume.pdf"
     },
     "footer": {
       "copyright": "Copyright©2021 Alen Basar"

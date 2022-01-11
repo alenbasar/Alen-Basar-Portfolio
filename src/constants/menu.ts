@@ -27,7 +27,11 @@ export const mobileMenu: MenuItem[] = [
   { key: "m-about", to: "about", label: "About Me" },
   { key: "m-projects", to: "showcase", label: "Projects" },
   { key: "m-contact", to: "contact", label: "Contact" },
-  { key: "m-resume", link: "", label: "Resume" },
+  {
+    key: "m-resume",
+    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Resume.pdf",
+    label: "Resume",
+  },
 ];
 
 export const navLogo: MenuItem[] = [];
@@ -38,7 +42,7 @@ export const desktopMenu: MenuItem[] = [
   { key: "contact", to: "contact", label: "Contact" },
   {
     key: "resume",
-    link: "",
+    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Resume.pdf",
     label: "Resume",
   },
 ];
@@ -47,12 +51,12 @@ export const footerMenu: MenuItem[] = [
   { key: "f-github", link: "https://github.com/alenbasar", label: "GitHub" },
   {
     key: "f-linkedin",
-    link: "https://www.linkedin.com/in/alen-basar-54b9b220b/",
+    link: "https://www.linkedin.com/in/alenbasar/",
     label: "LinkedIn",
   },
   {
     key: "f-resume",
-    link: "",
+    link: "https://alenbasar.s3.ap-southeast-2.amazonaws.com/Resume.pdf",
     label: "My Resume",
   },
 ];
