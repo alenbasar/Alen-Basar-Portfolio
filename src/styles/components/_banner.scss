@@ -1,17 +1,13 @@
 .c-banner {
   // display: flex;
   position: relative;
-  // top: 2rem;
+  top: 5rem;
   padding-top: 15rem;
   padding-bottom: 10rem;
-  // width: 5rem;
   height: 90vh;
-  // justify-content: center;
   margin: auto;
   text-align: center;
-  // position: absolute;
   max-width: 118.75rem;
-  // background-color: black;
   font-family: $font-primary;
   // z-index: -1000;
   &__content {
