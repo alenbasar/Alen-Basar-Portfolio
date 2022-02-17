@@ -97,6 +97,30 @@
           ]
         },
         {
+          "title": "BlitzKarter",
+          "description": [
+            "This is a flashcard quiz app where user can create new card by adding a question, correct answer and range of options as possible answers.",
+            "If correct answer is selected the card does flip animation showing the back of the card with the right answer and option to flip back or delete the card.",
+            "This app was made with the MERN stack"
+          ],
+          "stack": [
+            "JavaScript",
+            "ReactJS",
+            "SASS(SCSS)",
+            "NodeJS",
+            "Express.js",
+            "MongoDB"
+          ],
+          "sourceCode": "https://github.com/alenbasar/blitzkarter",
+          "images": [
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/BlitzKarter/empty_home.png",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/BlitzKarter/cards-home.png",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/BlitzKarter/create-new.png",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/BlitzKarter/create-new-error.png",
+            "https://alenbasar.s3.ap-southeast-2.amazonaws.com/screenshots/BlitzKarter/code.png"
+          ]
+        },
+        {
           "title": "Burger Maker",
           "description": [
             "This is burger building app where user can select ingredients and have it displayed with illustrated css artstyle, user also has an option to order the burger."
