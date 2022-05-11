@@ -1,32 +1,18 @@
 .c-banner {
-  // display: flex;
-  position: relative;
-  top: 5rem;
-  padding-top: 15rem;
-  padding-bottom: 10rem;
-  height: 90vh;
+  display: flex;
+  height: 100vh;
   margin: auto;
   text-align: center;
-  max-width: 118.75rem;
   font-family: $font-primary;
-  // z-index: -1000;
+
   &__content {
-    // width: 100%;
-    // position: absolute;
-    // height: 30rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    // justify-content: center;
     font-family: $font-secondary;
     user-select: none;
-    // animation: fadein 1.5s;
-
     &-title {
       color: transparentize($color-font-primary, 0.05);
-
-      // max-width: 100%;
       width: 100%;
       text-align: center;
       font-size: 2em;
@@ -40,9 +26,7 @@
 
     &-cta {
       align-self: center;
-      // margin: 1rem 0 1.2rem;
       font-size: 1.5em;
-      // max-height: 200px;
       color: transparentize($color-font-primary, 0.05);
       background-color: transparentize($color-background, 0.05);
       padding: 20px;
@@ -50,8 +34,6 @@
       transition: all 0.2s ease-in-out;
       border: 1px solid $color-font-primary;
       overflow: hidden;
-
-      // margin-top: 5em;
       &::before {
         display: none;
       }
