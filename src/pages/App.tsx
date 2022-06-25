@@ -41,14 +41,17 @@ const App = () => {
         <>
           <BackgroundParticles />
           <React.Fragment>
-            <Header logo={data.logo} />
+            <Header
+              logo={data.logo}
+              className={`${sectionAnimatedClass} animate__zoomInUp`}
+            />
 
             <Waypoint onEnter={() => setBannerEntered(true)} />
             <Banner
               id="home"
               className={`${
                 bannerEntered
-                  ? `${sectionAnimatedClass} animate__fadeIn`
+                  ? `${sectionAnimatedClass} animate__bounceIn`
                   : "is-hidden"
               }`}
               pageTitle

@@ -84,9 +84,10 @@ const Header = (props: Props) => {
   return (
     <React.Fragment>
       <header
-        className={`c-header${floating ? " is-floating" : ""}${className}`}
+        className={`c-header ${floating ? " is-floating" : ""} ${className} `}
         {...restProps}
       >
+        <div className="c-header-spacer"></div>
         {/* Mobile menu */}
         <ul className="is-mobile-only">
           <div className="c-header-logo">
@@ -97,10 +98,10 @@ const Header = (props: Props) => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Alen_Basar")
+                  .typeString("Alen Basar")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString("Software_Developer")
+                  .typeString("Software Developer")
                   .pauseFor(2000)
                   .start();
               }}
@@ -137,10 +138,10 @@ const Header = (props: Props) => {
               }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Alen_Basar")
+                  .typeString("Alen Basar")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString("Software_Developer")
+                  .typeString("Software Developer")
                   .pauseFor(2000)
                   .start();
               }}

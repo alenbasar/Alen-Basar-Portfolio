@@ -1,6 +1,6 @@
-@import './colors';
-@import './typography';
-@import './media';
+@import "./colors";
+@import "./typography";
+@import "./media";
 
 * {
   box-sizing: border-box;
@@ -37,7 +37,6 @@ html {
   margin: 0;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  background: $color-background;
 }
 
 html,
@@ -155,7 +154,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {

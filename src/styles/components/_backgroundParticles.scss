@@ -12,6 +12,13 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background: rgb(217, 3, 104);
+    background: linear-gradient(
+      113deg,
+      rgba(217, 3, 104, 1) 0%,
+      rgba(85, 3, 217, 1) 53%,
+      rgba(217, 3, 104, 1) 100%
+    );
     // z-index: -1;
   }
 }
