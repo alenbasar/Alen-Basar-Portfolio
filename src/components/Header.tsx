@@ -101,7 +101,7 @@ const Header = (props: Props) => {
                   .typeString("Alen Basar")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString("Software Developer")
+                  .typeString("Fullstack Engineer")
                   .pauseFor(2000)
                   .start();
               }}
@@ -141,7 +141,7 @@ const Header = (props: Props) => {
                   .typeString("Alen Basar")
                   .pauseFor(2000)
                   .deleteAll()
-                  .typeString("Software Developer")
+                  .typeString("Fullstack Engineer")
                   .pauseFor(2000)
                   .start();
               }}
