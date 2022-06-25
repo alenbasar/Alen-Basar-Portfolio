@@ -18,12 +18,12 @@ const BackgroundParticles = () => {
               value: 2,
             },
             color: {
-              value: "#b5179e",
+              value: "#ffffff",
             },
             lineLinked: {
               enable: true,
               distance: 210,
-              color: "#b5179e",
+              color: "#ffffff",
               opacity: 1,
               width: 1.3,
             },

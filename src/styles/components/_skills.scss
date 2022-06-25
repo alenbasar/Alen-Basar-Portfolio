@@ -1,23 +1,15 @@
 .c-skills {
-  // width: 80%;
   max-width: 118.75rem;
   display: flex;
   flex-direction: column;
   margin: auto;
-  // justify-content: center;
-  // margin: 2rem auto;
-  // padding: 6rem;
   border: 1px solid $color-accent;
   border-left: none;
   border-right: none;
   border-radius: 1rem;
   color: $color-font-primary;
-  background-color: transparentize($color-background, 0.2);
+  background-color: white;
   box-shadow: 0px 18px 13px -16px rgba(0, 0, 0, 0.842);
-  // border-top: 1px solid $color-accent;
-  // border-bottom: 1px solid $color-accent;
-
-  // color: transparentize($color-font-primary, 0.19);
   &__heading {
     text-align: center;
     margin-bottom: 5rem;
@@ -51,14 +43,7 @@
         & svg path {
           fill: transparentize($color-primary, 0);
           transition: all 0.5s ease-in-out;
-          // stroke: $color-accent;
         }
-        // &:hover {
-        //   & svg path {
-        //     fill: transparentize($color-accent, 0);
-        //     // stroke: $color-accent;
-        //   }
-        // }
       }
 
       &-techs {

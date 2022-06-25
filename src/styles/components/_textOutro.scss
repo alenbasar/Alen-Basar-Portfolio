@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: transparentize(black, 0.05);
+  background-color: #360066;
   box-shadow: 0px 20px 23px -16px rgba(0, 0, 0, 0.75);
   // border-radius: 1rem;
   // width: 60%;
@@ -31,10 +31,6 @@
     transition: transform 0.05s;
     &:before {
       display: none;
-    }
-    &:hover {
-      // box-shadow: 0px 10px 13px -16px rgba(255, 255, 255, 0.75);
-      transform: translateY(-5px);
     }
   }
 
