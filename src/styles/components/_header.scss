@@ -1,18 +1,15 @@
 .c-header {
   position: fixed;
-  // top: 0;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  // max-width: 80%;
   background-color: #360066;
   left: 0;
   right: 0;
   transition: all 0.2s ease-in-out;
   user-select: none;
-  // border: 0.3px solid black;
   border-top: none;
   z-index: 1;
 
@@ -120,7 +117,7 @@
 
   @include media(large) {
     justify-content: space-between;
-    padding: 2em 10em;
+    padding: 2em 5em;
     height: 3rem;
     border-radius: 0 0 2rem 2rem;
     max-width: 80%;
