@@ -87,7 +87,7 @@ const App = () => {
             />
             <Waypoint onEnter={() => setSkillsEntered(true)} />
             <div className="o-spacer" />
-
+            <div className="o-spacer" />
             {/* Showcase */}
             <Waypoint onEnter={() => setShowcaseEntered(true)} />
             <Showcase
